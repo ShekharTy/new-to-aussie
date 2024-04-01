@@ -1,0 +1,28 @@
+.header {
+    display: flex; 
+    flex-direction: column; /* Change to column to stack items vertically */
+    align-items: center; /* Center-align items horizontally */
+    justify-content: space-between;
+    padding: 1%;
+    background-color: #BEDCFE;
+}
+
+.header img {
+    width: 20%;
+    margin-bottom: 20px; /* Add bottom margin to separate image from buttons */
+}
+
+.header button {
+    background-color: #BEDCFE;
+    border: 2px solid transparent; 
+    cursor: pointer; 
+    padding: 5px 10px;
+    font-size: x-large;
+    margin: 20px;
+}
+
+.header button:hover {
+    border-color: #333;
+}
+
+
