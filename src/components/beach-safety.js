@@ -14,7 +14,7 @@ function BeachSafety() {
         <div>
             <Header/>
             <div className='body'>
-
+                Getting started
             </div>
         </div>
     );
