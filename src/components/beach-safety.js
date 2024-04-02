@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './header';
 import '../styles/beach-safety.css';
+
+import signImage1 from '../data/sign1.png'; // Adjust the path as needed
+
 
 function BeachSafety() {
 
@@ -10,6 +13,17 @@ function BeachSafety() {
     useEffect(() => {
         document.title = `Beach Safety`;
     }); 
+    function GalleryItem({ imageSrc, altText, title, facts, onMouseEnter, onMouseLeave }) {
+        return (
+            <li className="gallery-item" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+                <img className="gallery-item__image" src={imageSrc} alt={altText} />
+                <div className="gallery-item__text">
+                    <div className="gallery-item__title">{title}</div>
+                    <div className="gallery-item__facts">{facts}</div>
+                </div>
+            </li>
+        );
+    }
     // Sub-module components
     function SwimmingSafety() {
         return (
@@ -31,14 +45,30 @@ function BeachSafety() {
             </div>
         );
     }
+    function SignGallery(){
+        // State to track which item is currently hovered
+        const [hoveredItem, setHoveredItem] = useState(null);
+        return (
+            <ul className="gallery">
+                <GalleryItem
+                    imageSrc={signImage1} 
+                    altText="Sign1"
+                    title="Sign1"
+                    facts="sign 1 explanation"
+                    onMouseEnter={() => setHoveredItem('Sign1')}
+                    onMouseLeave={() => setHoveredItem(null)}
+                />
+                {/* Add more GalleryItem components for additional items */}
+            </ul>
+        );
+    }
+
     return (
         <div>
             <Header/>
             <div className='body'>
-                
-                {/*Render sub modules */}
                 <SwimmingSafety />
-
+                <SignGallery />
             </div>
         </div>
     );
