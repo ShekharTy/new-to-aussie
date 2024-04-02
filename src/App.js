@@ -4,7 +4,6 @@ import Homepage from './components/home';
 import RoadSafety from './components/road-safety';
 import BeachSafety from './components/beach-safety';
 
-
 function App() {
   return (
     <Router>

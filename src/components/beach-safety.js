@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './header';
 import '../styles/beach-safety.css';
-
-import signImage1 from '../data/sign1.png'; // Adjust the path as needed
-
+import signImage1 from '../data/sign1.png'; 
+import signImage2 from '../data/sign2.png';
 
 function BeachSafety() {
 
@@ -52,16 +51,40 @@ function BeachSafety() {
             <ul className="gallery">
                 <GalleryItem
                     imageSrc={signImage1} 
-                    altText="Sign1"
-                    title="Sign1"
-                    facts="sign 1 explanation"
+                    altText="Dangerous Currents"
+                    title="Dangerous Current"
+                    facts="This symbol means, it is a  dangerous current and you should not swim in that area"
                     onMouseEnter={() => setHoveredItem('Sign1')}
                     onMouseLeave={() => setHoveredItem(null)}
                 />
+                <GalleryItem
+                imageSrc={signImage2} 
+                altText="Swim between the flags"
+                title="Swim between the flags"
+                facts="This symbol indicates it is a swimming area and you should swim between the red and yellow flags only."
+                onMouseEnter={() => setHoveredItem('Sign2')}
+                onMouseLeave={() => setHoveredItem(null)}
+            />
                 {/* Add more GalleryItem components for additional items */}
             </ul>
         );
     }
+    function WarningSigns() {
+        return (
+            <div>
+                <h2> Beach Warning Signs Guide </h2>
+                <p>
+                Warning signs are essential tools for promoting beach safety, 
+                preventing accidents, and ensuring that beachgoers can enjoy the beach responsibly while minimizing risks to their health and well-being.
+                </p>
+                <ul>
+                <li><a href="#currents">Hazards related to currents</a></li>
+                <li><a href="#wildlife">Hazards due to wildlife</a></li>
+                <li><a href="#weather">Hazards due to weather</a></li>
+                </ul>
+            </div>  
+        );
+    } 
 
     return (
         <div>
@@ -69,6 +92,7 @@ function BeachSafety() {
             <div className='body'>
                 <SwimmingSafety />
                 <SignGallery />
+                <WarningSigns />
             </div>
         </div>
     );
