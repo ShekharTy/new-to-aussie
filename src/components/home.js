@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from './header';
+import Footer from './footer';
 import '../styles/home.css';
 
 function Homepage() {
@@ -8,17 +9,16 @@ function Homepage() {
 
     useEffect(() => {
         document.title = `Home`;
-    }); 
+    });
 
     return (
-        <div>
+        <div className="page-container">
             <Header/>
-            <div className='body'>
-
-            </div>
+            <main className="content-wrap">
+            </main>
+            <Footer/>
         </div>
     );
 }
-
 
 export default Homepage;
