@@ -3,7 +3,7 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Homepage from './components/home';
 import RoadSafety from './components/road-safety';
 import BeachSafety from './components/beach-safety';
-
+import Attributions from './components/attribution';
 
 function App() {
   return (
@@ -13,6 +13,7 @@ function App() {
         <Route path="/home" element={<Homepage />} />
         <Route path="/road-safety" element={<RoadSafety />} />
         <Route path="/beach-safety" element={<BeachSafety />} />
+        <Route path="/attribution" element={<Attributions />} />
       </Routes>
     </Router>
   );

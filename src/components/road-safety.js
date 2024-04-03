@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Header from './header';
+import Footer from './footer';
 import '../styles/road-safety.css';
 
 function RoadSafety() {
-    let navigate = useNavigate();
 
     useEffect(() => {
         document.title = `Road Safety`;
@@ -16,6 +15,7 @@ function RoadSafety() {
             <div className='body'>
 
             </div>
+            <Footer/>
         </div>
     );
 }
