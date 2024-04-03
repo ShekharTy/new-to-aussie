@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+.road-safety-container {
+    display: flex;
+    min-height: 100vh;
+    font-family: 'Cabin';
+}
+
+.sidebar {
+    width: 350px;
+    background-color: #0085FF; 
+    padding: 30px;
+    height: 100vh; /* Full height */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); 
+    overflow-y: auto; 
+    color: white;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 100px; 
+    cursor: pointer; 
+}
+
+.sidebar ul li:hover {
+    background-color: #1C5D99;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 50px;
+}
+.sidebar ul li {
+    cursor: pointer;
+    padding: 10px;
+}
+.sidebar ul {
+    font-size: xx-large;
+}
+.sidebar li {
+    font-size: x-large;
+}
+
+.sidebar ul li.active {
+    background-color: #1C5D99;
+    color: white; 
+}
