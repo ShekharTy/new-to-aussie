@@ -2,6 +2,49 @@
 body {
   background-color: #f0f0f0; /* Change the color code to the desired background color */
 }
+
+/* Style titles with a specific color */
+h1, h2, h3, h4, h5, h6 {
+  color: #006eff; /* Replace #ff0000 with the color code you want */
+}
+
+
+/* Add margin above and below paragraphs */
+p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+/* Ensure the entire content is centered within the page */
+#swim {
+  max-width: 1200px; /* Set maximum width for content */
+  margin: 0 auto; /* Center content horizontally */
+  padding: 20px; /* Add padding around content */
+}
+
+/* Banner styles */
+.banner {
+  text-align: center;
+  margin-bottom: 20px; /* Add margin to separate the banner from the rest of the content */
+}
+
+.banner-image {
+  max-width: 100%; /* Ensure the banner image fits within its container */
+  max-height: 500px; /* Set maximum height for the banner image */
+}
+
+
+/* Add margin between the banner text and the rest of the content */
+h2 {
+  margin-top: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* Adjust styles for gallery items */
 .gallery {
   padding: 0;
   margin: 0;
@@ -35,6 +78,8 @@ body {
   font-size: 18px;
   color: #666;
 }
+
+/* Adjust styles for custom arrows */
 .custom-arrows {
   display: flex;
   justify-content: center;
@@ -47,7 +92,7 @@ body {
   margin: 0 10px; /* Adjust as needed */
 }
 
-
+/* Adjust styles for flag counter */
 .flag-counter {
   margin-top: 20px; /* Add some space above */
   margin-bottom: 20px; /* Add some space below */

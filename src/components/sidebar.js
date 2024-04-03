@@ -14,19 +14,13 @@ const Sidebar = () => {
       <h2>Beach Safety</h2>
       <ul className="sidebar-nav">
         <li>
-          <a href="#" onClick={() => scrollToSection('swim')}>Safety Signs related to Swimming</a>
+          <a href="#" onClick={() => scrollToSection('swim')}>Learn Beach safety & regulations</a>
         </li>
         <li>
-          <a href="#" onClick={() => scrollToSection('currents')}>Safety Signs for Currents</a>
+          <a href="#" onClick={() => scrollToSection('warning')}>Learn Beach Warning Signs</a>
         </li>
         <li>
           <a href="#" onClick={() => scrollToSection('rip-currents')}>Rip Currents</a>
-        </li>
-        <li>
-          <a href="#" onClick={() => scrollToSection('weather-signs')}>Safety Signs for Weather</a>
-        </li>
-        <li>
-          <a href="#" onClick={() => scrollToSection('wildlife')}>Safety Signs related to Wildlife</a>
         </li>
         <li>
           <a href="#" onClick={() => scrollToSection('quiz')}>Quiz</a>
@@ -36,18 +30,14 @@ const Sidebar = () => {
       {/* Sections with ids for scrolling */}
       <div id="swim">
       </div>
-      <div id="currents">
+      <div id="warning">
         {/* Content related to currents signs goes here */}
       </div>
+      
       <div id="rip-currents">
         {/* Content related to rip currents goes here */}
       </div>
-      <div id="weather-signs">
-        {/* Content related to weather signs goes here */}
-      </div>
-      <div id="wildlife">
-        {/* Content related to wildlife signs goes here */}
-      </div>
+
       <div id="quiz">
         {/* Content related to quiz goes here */}
       </div>

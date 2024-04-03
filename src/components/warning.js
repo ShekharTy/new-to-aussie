@@ -3,25 +3,69 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; // Import arrow icons
-import signImage1 from '../data/yellow_flag.png'; 
-import signImage2 from '../data/sign2.png';
-import signImage3 from '../data/red_flag.png';
 import '../styles/warning.css';
+
+
+// Array of image data
+const imageData = [
+    {
+        imageSrc: require('../data/warning.png'),
+        altText: 'Strong winds',
+        title: 'Strong winds',
+        facts: 'Warning of strong winds, potential hazards or regulations, .'
+    },
+    {
+        imageSrc: require('../data/big_waves.png'),
+        altText: 'Swim between the flags',
+        title: 'Swim between the flags',
+        facts: 'This symbol indicates it is a swimming area and you should swim between the red and yellow flags only.'
+    },
+    {
+        imageSrc: require('../data/stingers.png'),
+        altText: 'Marine Stingers',
+        title: 'Marine Stingers',
+        facts: 'Alert about the presence of dangerous marine stingers, such as jellyfish or Portuguese man o wars, in the water.',
+    },
+    {
+        imageSrc: require('../data/warn_swim.png'),
+        altText: 'Swimming not advised',
+        title: 'Swimming not advised',
+        facts: 'Swimming in the area is not recommended or advised due to various potential hazards.'
+    },
+    {
+        imageSrc: require('../data/shallow.png'),
+        altText: 'Shallow water & sandbars',
+        title: 'Shallow water & sandbars',
+        facts: 'Alert for the areas where the water depth is shallow. Not suitable for diving..Warning for the presence of sandbars, which are shallow underwater ridges or banks composed of sand, in the water..'
+    },
+    {
+        imageSrc: require('../data/deep_water.png'),
+        altText: 'Deep water',
+        title: 'Deep water',
+        facts: 'Warning of the dangers from deep water.',
+    },
+    {
+        imageSrc: require('../data/rip.png'),
+        altText: 'RIP currents',
+        title: 'RIP currents',
+        facts: 'Warning of the potential danger posed by rip currents, which can pull swimmers away from the shore and into deeper water.',
+    },
+    {
+        imageSrc: require('../data/gutters.png'),
+        altText: 'Sudden drop off',
+        title: 'Sudden drop offr',
+        facts: 'The areas with sudden drop-offs or strong currents require extra vigilance from swimmers.Warning of the dangers from deep water.',
+    },
+    {
+        imageSrc: require('../data/sharks.png'),
+        altText: 'Shark Warning',
+        title: 'Shark Warning',
+        facts: 'Alert to the potential presence of sharks in the water.',
+    },
+];
 
 function Warning() {
     const sliderRef = useRef(null); // Reference to the Slider component
-
-    function GalleryItem({ imageSrc, altText, title, facts }) {
-        return (
-            <div className="gallery-item">
-                <img className="gallery-item__image" src={imageSrc} alt={altText} />
-                <div className="gallery-item__text">
-                    <div className="gallery-item__title">{title}</div>
-                    <div className="gallery-item__facts">{facts}</div>
-                </div>
-            </div>
-        );
-    }
 
     // State to track the number of flags
     const [flagCounter, setFlagCounter] = useState(0);
@@ -44,10 +88,17 @@ function Warning() {
     return (
         <div id="swim">
             <h2>Learn Beach Warning Signs</h2>
+
+            <h3>What are Beach Warning Signs?</h3>
+            <p>Diamond-shaped signs in yellow and black serve as warnings about potential hazards at the beach.</p>
+            
+            <h3>Importance of Beach Warning Signs</h3>
             <p>
-                Swimming.
-            </p>       
-            <h3>Swim Safety Tips for you!</h3>
+            Beach warning signboards are crucial because they provide vital information about potential hazards and safety guidelines to beachgoers. They serve as visual aids to educate and alert individuals about dangers such as strong currents, dangerous marine life, 
+            prohibited activities, and other risks specific to the beach environment. 
+            By understanding and adhering to the information conveyed through these signboards, beach visitors can make informed decisions to stay safe, prevent accidents, and ensure an enjoyable beach experience for themselves and others..
+            </p> 
+
 
             <Slider
                 ref={sliderRef}
@@ -58,24 +109,15 @@ function Warning() {
                 slidesToScroll={1}
                 afterChange={handleSlideChange}
             >
-                <GalleryItem
-                    imageSrc={signImage1} 
-                    altText="yellow flag"
-                    title="Caution is required"
-                    facts="Be careful of potential hazards in the water such as large waves or sharks"
-                />
-                <GalleryItem
-                    imageSrc={signImage2} 
-                    altText="Swim between the flags"
-                    title="Swim between the flags"
-                    facts="This symbol indicates it is a swimming area and you should swim between the red and yellow flags only."
-                />
-                <GalleryItem
-                    imageSrc={signImage3} 
-                    altText="red flag"
-                    title="Extremely Dangerous"
-                    facts="Extremely Dangerous.Should not enter the ocean"
-                />
+                {imageData.map((item, index) => (
+                    <GalleryItem
+                        key={index}
+                        imageSrc={item.imageSrc}
+                        altText={item.altText}
+                        title={item.title}
+                        facts={item.facts}
+                    />
+                ))}
             </Slider>
 
             {/* Custom arrow components with click event handlers */}
@@ -85,8 +127,21 @@ function Warning() {
             </div>
             
             {/* Flag Counter */}
-            <div className="flag-counter"> Flag {flagCounter} / 3</div>
+            <div className="flag-counter"> Warning Sign {flagCounter} / {imageData.length}</div>
 
+        </div>
+         
+    );
+}
+
+function GalleryItem({ imageSrc, altText, title, facts }) {
+    return (
+        <div className="gallery-item">
+            <img className="gallery-item__image" src={imageSrc} alt={altText} />
+            <div className="gallery-item__text">
+                <div className="gallery-item__title">{title}</div>
+                <div className="gallery-item__facts">{facts}</div>
+            </div>
         </div>
     );
 }

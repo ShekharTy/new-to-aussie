@@ -4,6 +4,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; // Import arrow icons
 import '../styles/swim-safety.css';
+import bannerImage from '../data/swim_banner.jpg'; 
+
 
 // Array of image data
 const imageData = [
@@ -121,21 +123,27 @@ function SwimSafety() {
     };
 
     return (
+       
         <div id="swim">
-            <h2>Learn Safety Signs</h2>
+            <h2>Learn Beach Safety & Regulatory Signs</h2>
             <p>
-            Welcome to our website dedicated to beach safety and education! We believe that enjoying the beach should be both fun and safe. Whether you're a seasoned beachgoer or someone new to the coastal environment, there's always something new to learn about staying safe by the water.
-            </p>       
+            Welcome to the section dedicated to beach safety learning! We believe that enjoying the beach should be both fun and safe. Whether you're a seasoned beachgoer or someone new to the coastal environment, there's always something new to learn about staying safe by the water.
+            </p>  
+
+            <div className="banner">
+                <img src={bannerImage} alt="Banner" className="banner-image" />
+                </div>
+                 
             <h3>Why is beach safety important?</h3>
             <p>Beaches can be dynamic and unpredictable environments, with changing tides, currents, and weather conditions. 
             Knowing how to recognize potential hazards 
             and understanding beach safety signage can significantly reduce the risk of accidents and ensure a positive beach experience for everyone.
-
-            Together, let's make every beach day a safe and memorable experience!
-            Start exploring our website today and empower yourself with the knowledge you need to stay safe and have fun at the beach!
             </p>
 
-
+            <h3>Let's start learning below signs!</h3>
+            <p>Together, let's make every beach day a safe and memorable experience!
+            Start exploring below  safety & regulatory signs and empower yourself with the knowledge you need to stay safe and have fun at the beach!</p>
+           
             <Slider
                 ref={sliderRef}
                 dots={true}
@@ -166,6 +174,7 @@ function SwimSafety() {
             <div className="flag-counter"> Flag {flagCounter} / {imageData.length}</div>
 
         </div>
+         
     );
 }
 

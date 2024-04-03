@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './header';
 import '../styles/beach-safety.css';
-import Sidebar from '../components/sidebar';
+
 
 function BeachSafety() {
     useEffect(() => {
@@ -13,7 +13,7 @@ function BeachSafety() {
         <div>
             <Header />
             <div className="body">
-                <Sidebar />
+                
                 <div className="main-content">
                     <h1>Enjoy the Beach, Stay Safe!</h1>
                     <p>

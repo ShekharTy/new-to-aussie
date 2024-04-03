@@ -1,12 +1,12 @@
 /* sidebar.css */
 /* sidebar.css */
 .sidebar {
-  position: fixed;
-  top: 70px; /* Adjust this value to match the height of your header */
+  position: relative;
+  top: 20px; /* Adjust this value to match the height of your header */
   left: 0;
   width: 250px;
   height: calc(100% - 70px); /* Adjust this value to leave space for the header */
-  background-color: #f0f0f0;
+  background-color: #ADD8E6;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000; /* Ensure sidebar is above other content */
