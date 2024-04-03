@@ -1,5 +1,5 @@
 .footer {
-    background-color: #f4f4f4;
+    background-color: #BEDCFE;
     text-align: center;
     padding: 20px;
     position: relative;
@@ -9,22 +9,24 @@
   
   .footer-upper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
     text-align: left;
   }
   
   .project-description {
     flex: 1;
-    margin-right: 20px; /* Adjust spacing as needed */
-    font-size: 1.1em; /* Slightly larger text */
+    margin-left: 20px;
+    font-size: 1.1em; 
   }
   
   .useful-links {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    margin-right: 300px;
+    justify-content: center;
   }
   
   .footer-lower {
@@ -41,7 +43,7 @@
   }
   
   .back-to-top {
-    position: static; /* Changed from absolute to static */
+    position: absolute;
     margin-top: 20px;
     background-color: #007bff;
     color: white;
@@ -49,6 +51,8 @@
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
+    right: 80px;
+    bottom: 20px;
   }
   
   .back-to-top:hover {

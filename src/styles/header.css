@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1%;
-    background-color: #1C5D99;
+    background-color: #BEDCFE;
 }
 
 .header img {
@@ -13,13 +13,12 @@
 }
 
 .header button {
-    background-color: #1C5D99;
+    background-color: #BEDCFE;
     border: 2px solid transparent; 
     cursor: pointer; 
     padding: 5px 10px;
     font-size: x-large;
     margin: 20px;
-    color: white;
 }
 
 .header button:hover {

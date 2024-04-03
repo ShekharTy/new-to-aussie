@@ -4,7 +4,7 @@ html, body, .page-container {
 }
 
 body {
-    background-color: #BEDCFE; 
+    background-color: white; 
     display: flex;
     flex-direction: column;
 }

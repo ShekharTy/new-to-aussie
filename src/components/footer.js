@@ -26,9 +26,6 @@ function Footer() {
         </div>
       </div>
       <div className="footer-lower">
-        <div className="contact-info">
-          Contact us at: project@example.com
-        </div>
         <button onClick={goToTop} className="back-to-top">Back to Top</button>
         <div className="copyright">
           Copyright © 2024 Dumb Legends
