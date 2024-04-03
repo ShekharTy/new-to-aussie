@@ -1,27 +1,29 @@
+/* CSS for changing the color of the page background */
+body {
+  background-color: #f0f0f0; /* Change the color code to the desired background color */
+}
 .gallery {
-  list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
 .gallery-item {
   display: flex;
-  margin-bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .gallery-item__image {
-  width: 100px;
+  width: 500px;
   height: auto;
-  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 .gallery-item__text {
-  flex-grow: 1;
-  visibility: hidden; /* Initially hidden */
-}
-
-.gallery-item:hover .gallery-item__text {
-  visibility: visible; /* Show text on hover */
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
 }
 
 .gallery-item__title {
@@ -30,5 +32,25 @@
 }
 
 .gallery-item__facts {
+  font-size: 18px;
   color: #666;
+}
+.custom-arrows {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.custom-arrow {
+  cursor: pointer;
+  font-size: 24px; /* Adjust as needed */
+  margin: 0 10px; /* Adjust as needed */
+}
+
+
+.flag-counter {
+  margin-top: 20px; /* Add some space above */
+  margin-bottom: 20px; /* Add some space below */
+  display: flex;
+  justify-content: center; /* Horizontally center */
 }

@@ -19,4 +19,23 @@
     z-index: 1; /* Ensure main content appears above sidebar */
     /* Adjust width and other styles as needed */
   }
+
+  .beach-safety-list {
+    list-style-type: none;
+    counter-reset: beach-counter;
+    padding-left: 0;
+  }
+  
+  .beach-safety-list li {
+    counter-increment: beach-counter;
+    margin-bottom: 15px;
+  }
+  
+  .beach-safety-list li::before {
+    content: counter(beach-counter) ".";
+    color: #007bff; /* Change color as needed */
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
   
