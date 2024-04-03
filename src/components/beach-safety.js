@@ -24,9 +24,11 @@ function BeachSafety() {
                         <li>
                             <Link to="/swimsafety">Learn Beach Safety & Regulation Signs</Link>
                         </li>
-
                         <li>
                             <Link to="/warning">Learn Beach Warning Signs</Link>
+                        </li>
+                        <li>
+                            <Link to="/beachquiz">Check your learnings - Quiz </Link>
                         </li>
                     </ul>
                     

@@ -53,7 +53,7 @@ const imageData = [
     {
         imageSrc: require('../data/gutters.png'),
         altText: 'Sudden drop off',
-        title: 'Sudden drop offr',
+        title: 'Sudden drop off',
         facts: 'The areas with sudden drop-offs or strong currents require extra vigilance from swimmers.Warning of the dangers from deep water.',
     },
     {
