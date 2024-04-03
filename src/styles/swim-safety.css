@@ -1,0 +1,34 @@
+.gallery {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-item {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.gallery-item__image {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.gallery-item__text {
+  flex-grow: 1;
+  visibility: hidden; /* Initially hidden */
+}
+
+.gallery-item:hover .gallery-item__text {
+  visibility: visible; /* Show text on hover */
+}
+
+.gallery-item__title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.gallery-item__facts {
+  color: #666;
+}
