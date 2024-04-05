@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
 .road-safety-container {
     display: flex;
     min-height: 100vh;
@@ -7,29 +8,30 @@
 
 .sidebar {
     width: 350px;
-    background-color: #0085FF; 
+    background-color: #0085FF;
     padding: 30px;
-    height: 100vh; /* Full height */
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1); 
-    overflow-y: auto; 
+    height: 100vh;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    overflow-y: auto;
     color: white;
 }
 
-.sidebar h2 {
+.sidebar h1, .sidebar ul li {
     margin-top: 0;
 }
 
 .sidebar ul {
-    list-style-type: none; 
+    list-style-type: none;
     padding: 0;
 }
 
 .sidebar ul li {
-    padding: 100px; 
-    cursor: pointer; 
+    padding: 10px;
+    cursor: pointer;
+    font-size: large;
 }
 
-.sidebar ul li:hover {
+.sidebar ul li:hover, .sidebar ul li.active {
     background-color: #1C5D99;
 }
 
@@ -37,18 +39,89 @@
     flex-grow: 1;
     padding: 50px;
 }
-.sidebar ul li {
+
+.myths-slider .myth {
+    background-color: #007bff;
+    border-radius: 100%;
+    color: white;
+    padding: 20px;
     cursor: pointer;
-    padding: 10px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    overflow: hidden;
 }
-.sidebar ul {
-    font-size: xx-large;
+
+.myth:hover {
+    background-color: #0056b3;
 }
-.sidebar li {
+
+.myth.busted, .myth.confirmed {
+    width: 220px;
+    height: 220px;
     font-size: x-large;
 }
 
-.sidebar ul li.active {
-    background-color: #1C5D99;
-    color: white; 
+.myth.busted {
+    background-color: #dc3545;
+}
+
+.myth.confirmed {
+    background-color: #28a745;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.myth-counter {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.navigation-buttons button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Cabin';
+    margin: 0 80px;
+    font-size: large;
+}
+
+.navigation-buttons button:hover {
+    background-color: darkgreen;
+}
+
+.myth-description {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+
 }
