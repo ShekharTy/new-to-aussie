@@ -121,10 +121,22 @@ const Quiz = () => {
     }
   };
 
+  // Reset the quiz to its initial state
+  const resetQuiz = () => {
+    setCurrentQuestion(0);
+    setUserAnswers(Array(questions.length).fill(null));
+    setShowReviewPage(false);
+  };
+
+  // Calculate score for the scoreboard
+  const calculateScore = () => {
+    return userAnswers.filter(answer => answer?.isCorrect).length;
+  };
+
   // Component for reviewing answers at the end
   const ReviewPage = () => (
     <div className="review-page">
-      <h1>Review Your Answers</h1>
+      <h1>Your Score: {calculateScore()} / {questions.length}</h1>
       {questions.map((question, index) => {
         const userAnswer = userAnswers[index];
         const isCorrect = userAnswer?.isCorrect;
@@ -143,16 +155,23 @@ const Quiz = () => {
           </div>
         );
       })}
+      <button onClick={resetQuiz} className="reset-quiz-btn">Redo Quiz</button>
     </div>
   );
 
   return (
     <div className="quiz-container">
       <Header />
+      <div className="back-link-container">
+        <Link to="/beach-safety" className="back-to-beach-safety">&#8592; Back to Beach Safety</Link>
+      </div>
       {showReviewPage ? (
         <ReviewPage />
       ) : (
         <>
+        <div className="progress-tracker">
+            Question {currentQuestion + 1} / {questions.length}
+          </div>
           <div className="quiz-content">
             <div className='question-section'>
               <img src={questions[currentQuestion].imageSrc} alt="Question" className="question-image" />

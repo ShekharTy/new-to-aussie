@@ -86,3 +86,73 @@
     display: block; 
   }
   
+  .reset-quiz-btn {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .reset-quiz-btn:hover {
+    background-color: #45a049; /* Darker green */
+  }
+
+  .back-arrow {
+    position: absolute;
+    top: 70px; /* Adjust this value if necessary based on the height of your Header */
+    left: 20px; /* Or however much you want to offset from the left side */
+    z-index: 10; /* Makes sure the link is clickable even if other elements overlap */
+  }
+  
+  .quiz-container {
+    text-align: left;
+  }
+  
+  .back-to-beach-safety {
+    display: block; /* Makes it a block-level element */
+    margin-top: 20px; /* Adds space between the header and the arrow, adjust as needed */
+    font-size: 24px; /* Adjust the font size as desired */
+    text-decoration: none; /* Removes the underline from the link */
+    color: #007bff; /* Sets the color, change as needed */
+    padding-left: 0; /* Aligns the link to the very left edge of its container */
+    margin-left: 0; /* Ensures it starts at the very left with no additional margin */
+    text-align: left; /* Aligns the text inside the link to the left */
+  }
+  
+  .back-link-container {
+    width: 100%; /* Full width to stretch across the container */
+    text-align: left; /* Align text to the left */
+  }
+
+  .progress-tracker {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  /* Add styles for the progress bar container if you choose to use a visual progress bar */
+  .progress-bar-container {
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar {
+    height: 20px;
+    background-color: #4CAF50;
+    width: 0%; /* Initially, it should be 0 and will be set dynamically */
+  }
+  
+  /* The reset button can be styled further if needed */
+  .reset-quiz-btn {
+    /* ... existing styles */
+    margin-top: 20px; /* Adds some space between the review items and the button */
+  }
+  
