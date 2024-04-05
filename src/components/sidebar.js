@@ -16,6 +16,7 @@ const Sidebar = () => {
       <ul>
         <li><Link to="/swimsafety"> Beach Safety Signs & Regulations</Link></li>
         <li><Link to="/warning"> Beach Warning Signs</Link></li>
+        <li><Link to="/beach-quiz">Check Your Beach Safety Knowledge</Link></li>
       </ul>
       </motion.div>
   );

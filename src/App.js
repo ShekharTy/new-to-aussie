@@ -5,6 +5,8 @@ import RoadSafety from './components/road-safety';
 import BeachSafety from './components/beach-safety';
 import SwimSafety from './components/swimsafety';
 import Warning from './components/warning';
+import Quiz from './components/beach-quiz';
+
 
 function App() {
   return (
@@ -16,6 +18,7 @@ function App() {
         <Route path="/beach-safety" element={<BeachSafety />} />
         <Route path="/swimsafety" element={<SwimSafety />} />
         <Route path="/warning" element={<Warning />} />
+        <Route path="/beach-quiz" element={<Quiz />} />
       </Routes>
     </Router>
   );

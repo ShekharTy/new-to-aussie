@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from './header';
 import '../styles/beach-safety.css';
 import Sidebar from '../components/sidebar';
-import Quiz from './quiz'; // Assuming you will define and use Quiz component later
+import Quiz from './beach-quiz';
 
 function BeachSafety() {
     useEffect(() => {
@@ -31,7 +31,7 @@ function BeachSafety() {
                             <Link to="/warning">Learn Beach Warning Signs</Link>
                         </li>
                         <li>
-                            <Link to="/beachquiz">Check your learnings - Quiz </Link>
+                            <Link to="/beach-quiz">Check your learnings - Quiz </Link>
                         </li>
                     </ul>
                 </div>

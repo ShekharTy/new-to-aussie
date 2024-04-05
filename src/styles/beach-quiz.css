@@ -1,0 +1,88 @@
+.review-page {
+    /* Styles for the review page layout */
+  }
+  
+  .review-item {
+    margin-bottom: 20px;
+  }
+  
+  .review-item .question-text {
+    font-weight: bold;
+  }
+  
+  .review-item .answers {
+    margin-top: 10px;
+  }
+  
+  .review-item .answer {
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block; /* or block if you want each answer to be on a new line */
+  }
+  
+  .review-item .answer.correct {
+    color: green;
+  }
+  
+  .review-item .answer.incorrect {
+    color: red;
+  }
+  
+  .answer-button {
+    display: block; /* Ensure each button is on a new line */
+    text-align: left; /* Align the text to the left */
+    margin-bottom: 10px; /* Add some space between the buttons */
+    padding: 10px; /* Add padding inside the buttons */
+    /* Add other styles as needed */
+  }
+  
+  .answer-button:hover {
+    /* Hover state for buttons */
+    background-color: #ececec;
+  }
+  
+  .answer-button.selected {
+    /* Style for the selected answer */
+    border-color: blue
+  }
+
+  .quiz-navigation {
+    margin-top: 20px;
+  }
+  
+  .quiz-navigation button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .quiz-navigation button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .quiz-container, .review-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .quiz-content, .question-section, .answer-section, .quiz-navigation {
+    width: 100%; /* Adjust the width as necessary */
+    max-width: 600px; /* Set a max-width for larger screens */
+    margin: auto;
+  }
+  
+  .question-image {
+    max-width: 200px; 
+    height: auto;
+    margin: 20px auto; 
+    display: block; 
+  }
+  
