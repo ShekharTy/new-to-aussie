@@ -1,38 +1,22 @@
-/* sidebar.css */
-/* sidebar.css */
+/* Sidebar.css */
 .sidebar {
-  position: relative;
-  top: 20px; /* Adjust this value to match the height of your header */
-  left: 0;
-  width: 250px;
-  height: calc(100% - 70px); /* Adjust this value to leave space for the header */
-  background-color: #ADD8E6;
+  margin-top: 60px; /* Adjust this value according to the height of your header */
+  width: 250px; /* Adjust width as needed */
+  background-color: #f0f0f0; /* Example background color */
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Ensure sidebar is above other content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Example box shadow */
 }
 
-.sidebar h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-.sidebar-nav {
-  list-style-type: none;
+ul {
+  list-style: none;
   padding: 0;
 }
 
-.sidebar-nav li {
+li {
   margin-bottom: 10px;
 }
 
-.sidebar-nav li a {
+a {
   text-decoration: none;
   color: #333;
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-.sidebar-nav li a:hover {
-  color: #007bff;
 }

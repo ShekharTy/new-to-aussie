@@ -1,13 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './header';
 import '../styles/beach-safety.css';
-<<<<<<< Updated upstream
-
-=======
 import Sidebar from '../components/sidebar';
-import Quiz from './quiz';
->>>>>>> Stashed changes
+import Quiz from './quiz'; // Assuming you will define and use Quiz component later
 
 function BeachSafety() {
     useEffect(() => {
@@ -33,14 +29,9 @@ function BeachSafety() {
                         <li>
                             <Link to="/warning">Learn Beach Warning Signs</Link>
                         </li>
-<<<<<<< Updated upstream
+                        {/* Assuming you will define and use Quiz component later */}
                         <li>
                             <Link to="/beachquiz">Check your learnings - Quiz </Link>
-=======
-                        {/* Toggle quiz visibility from the BeachSafety page */}
-                        <li>
-                            <button onClick={toggleQuiz}>Take the Quiz</button>
->>>>>>> Stashed changes
                         </li>
                     </ul>
                     

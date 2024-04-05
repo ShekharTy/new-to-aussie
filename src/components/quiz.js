@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect , useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './header';
 import '../styles/beach-safety.css';
 import Sidebar from '../components/sidebar';
+
+
 
 const Quiz = () => {
   const questions = [
