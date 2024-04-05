@@ -18,7 +18,8 @@ function BeachSafety() {
                 <div className="main-content">
                     <h1>Enjoy the Beach, Stay Safe!</h1>
                     <p>
-                        Beach safety is crucial for ensuring a fun and secure experience by the seaside. Here are some important beach safety rules to follow:
+                        Beach safety is crucial for ensuring a fun and secure experience by the seaside. Here are some important beach safety rules you can learn in below modules 
+                        and test your skills with an interactive quiz!
                     </p>
                     <h2>Learning Modules</h2>
                     <ul className="beach-safety-list">
@@ -29,13 +30,10 @@ function BeachSafety() {
                         <li>
                             <Link to="/warning">Learn Beach Warning Signs</Link>
                         </li>
-                        {/* Assuming you will define and use Quiz component later */}
                         <li>
                             <Link to="/beachquiz">Check your learnings - Quiz </Link>
                         </li>
                     </ul>
-                    
-                    {/* Add other main content here */}
                 </div>
             </div>
         </div>
