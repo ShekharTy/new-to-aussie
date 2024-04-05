@@ -1,0 +1,42 @@
+.signs-slider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
+  }
+  
+  .card {
+    cursor: pointer;
+    width: 350px; 
+    height: 450px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+  }
+  
+  .card-content, .card-image {
+    width: 60%;
+    height: 70%;
+    object-fit: scale-down;
+  }
+  
+  .card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; 
+  }
+  
+  .navigation-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .traffic-instructions {
+    text-align: center;
+    margin: 10px 0;
+    font-style: italic;
+}

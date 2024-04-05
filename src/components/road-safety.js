@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from './header';
 import Footer from './footer';
 import '../styles/road-safety.css';
+import TrafficSigns from './traffic-sign';
 
 function RoadSafety() {
     const [selectedModule, setSelectedModule] = useState('');
@@ -49,7 +50,9 @@ function RoadSafety() {
                     </ul>
                 </aside>
                 <div className="content">
-                    {selectedModule === 'Traffic signs' && <h1>Traffic Signs Content</h1>}
+                    {selectedModule === 'Traffic signs' && (
+                        <TrafficSigns />
+                    )}
                     {selectedModule === 'RoadWorks' && <h1>Roadworks Content</h1>}
                     {selectedModule === 'Myth Buster' && (
                         <div>
