@@ -17,6 +17,7 @@ const Sidebar = () => {
         <li><Link to="/swimsafety"> Beach Safety Signs & Regulations</Link></li>
         <li><Link to="/warning"> Beach Warning Signs</Link></li>
         <li><Link to="/beach-quiz">Check Your Beach Safety Knowledge</Link></li>
+        <li><Link to="/scenario-component">Scenario Based Learning Module</Link></li>
       </ul>
       </motion.div>
   );

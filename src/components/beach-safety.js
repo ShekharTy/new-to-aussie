@@ -30,8 +30,13 @@ function BeachSafety() {
                         <li>
                             <Link to="/warning">Learn Beach Warning Signs</Link>
                         </li>
+
                         <li>
                             <Link to="/beach-quiz">Check your learnings - Quiz </Link>
+                        </li>
+                        
+                        <li>
+                            <Link to="/scenario-component">Scenario Based Learning Module </Link>
                         </li>
                     </ul>
                 </div>

@@ -6,6 +6,7 @@ import BeachSafety from './components/beach-safety';
 import SwimSafety from './components/swimsafety';
 import Warning from './components/warning';
 import Quiz from './components/beach-quiz';
+import ScenarioComponent from './components/scenario-component';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/swimsafety" element={<SwimSafety />} />
         <Route path="/warning" element={<Warning />} />
         <Route path="/beach-quiz" element={<Quiz />} />
+        <Route path="/scenario-component" element={<ScenarioComponent />} />
       </Routes>
     </Router>
   );

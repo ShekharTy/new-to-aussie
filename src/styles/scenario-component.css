@@ -1,10 +1,13 @@
-/* ScenarioComponent.css */
-
 .scenario-container {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 50px; /* Adjust this value to add space between scenarios */
+  }
+  
+  
+  .scenario-container + .scenario-container {
+    margin-top: 20px; /* Add margin between each scenario container */
   }
   
   .choices button {
@@ -19,5 +22,11 @@
   
   .feedback {
     margin-top: 20px;
+  }
+  
+  .feedback p {
+    font-size: medium;
+    color: red;
+    font-style: italic;
   }
   
