@@ -9,14 +9,14 @@ function RoadSafety() {
     const [selectedModule, setSelectedModule] = useState('');
     const [currentMythIndex, setCurrentMythIndex] = useState(0);
     const [progress, setProgress] = useState(0);
-    const [showWelcome, setShowWelcome] = useState(true); 
+    const [showWelcome, setShowWelcome] = useState(true);
     const [myths, setMyths] = useState([
         { id: 1, text: "It's fine to use your phone while you're driving if it's in a cradle", description: "Please avoid using mobile devices while driving. Driving requires your full attention", isMyth: true, revealed: false },
-        { id: 2, text: "When approaching a roundabout always give way to your right",description:"Not just on your right. Drivers must slow or stop to give way to any vehicles already in the roundabout.", isMyth: true, revealed: false },
-        { id: 3, text: "If you're speeding, keep it below 10 per cent over the limit to avoid fines",description:"Not True. Avoid overspeeding even if the road is clear.", isMyth: true, revealed: false },
-        { id: 4, text: "Driving in bare feet is illegal",description:"It is not illegal. But prefer driving with close toed shoes for better control of the car.", isMyth: true, revealed: false },
-        { id: 5, text: "Flashing your lights to warn others of speed cameras or police ahead is legal",description:"Technically Illegal. Section 218 of the Australian Road Rules states that you cannot use your high beams on any vehicle within 200 metres of your car.", isMyth: true, revealed: false },
-        { id: 6, text: "You can drink alcohol in the car as long as you’re below the legal limit",description:"Definitely Not. Please do not drive if you are drinking. Avoid open alcohol containers inside the vehicle", isMyth: true, revealed: false },
+        { id: 2, text: "When approaching a roundabout always give way to your right", description: "Not just on your right. Drivers must slow or stop to give way to any vehicles already in the roundabout.", isMyth: true, revealed: false },
+        { id: 3, text: "If you're speeding, keep it below 10 per cent over the limit to avoid fines", description: "Not True. Avoid overspeeding even if the road is clear.", isMyth: true, revealed: false },
+        { id: 4, text: "Driving in bare feet is illegal", description: "It is not illegal. But prefer driving with close toed shoes for better control of the car.", isMyth: true, revealed: false },
+        { id: 5, text: "Flashing your lights to warn others of speed cameras or police ahead is legal", description: "Technically Illegal. Section 218 of the Australian Road Rules states that you cannot use your high beams on any vehicle within 200 metres of your car.", isMyth: true, revealed: false },
+        { id: 6, text: "You can drink alcohol in the car as long as you’re below the legal limit", description: "Definitely Not. Please do not drive if you are drinking. Avoid open alcohol containers inside the vehicle", isMyth: true, revealed: false },
     ]);
 
     useEffect(() => {
@@ -42,13 +42,13 @@ function RoadSafety() {
                 <div className="welcome-overlay">
                     <div className="welcome-message-road">
                         <h2>Welcome to Road Safety Module!</h2>
-                        <p>This section provides essential information on road safety, including traffic signs, roadworks, and debunking common myths.<br/> Click on the different modules to learn more and test your knowledge with the quiz!</p>
+                        <p>This section provides essential information on road safety, including traffic signs, roadworks, and debunking common myths.<br /> Click on the different modules to learn more and test your knowledge with the quiz!</p>
                         <button onClick={closeWelcome}>Explore</button>
                     </div>
                 </div>
             )}
             <div className={`road-safety-container ${showWelcome ? 'blur-effect' : ''}`}>
-            <aside className={`sidebar ${showWelcome ? 'blur-effect' : ''}`}>
+                <aside className={`sidebar ${showWelcome ? 'blur-effect' : ''}`}>
                     <h1>Road Safety and Regulations</h1>
                     <ul>
                         <li className={selectedModule === 'Traffic signs' ? 'active' : ''} onClick={() => handleModuleClick('Traffic signs')}>Traffic signs</li>
@@ -61,6 +61,13 @@ function RoadSafety() {
                     </ul>
                 </aside>
                 <div className="content">
+                    {selectedModule === '' && (
+                        <div>
+                            <h1>Welcome to Driving in Victoria</h1>
+                            <p>Welcome to the Road Safety Module. Here, you will find essential information tailored for drivers in Victoria, including traffic rules, signs, and guidelines for safe driving practices. Whether you're a new driver or looking to refresh your knowledge, this module offers valuable insights to navigate Victoria's roads safely.</p>
+                            <p>Understanding local road rules, recognizing traffic signs, and debunking common myths are crucial for both your safety and that of other road users. Explore the various sections to enhance your driving knowledge and ensure a safer driving experience in Victoria.</p>
+                        </div>
+                    )}
                     {selectedModule === 'Traffic signs' && (
                         <TrafficSigns />
                     )}
@@ -73,8 +80,8 @@ function RoadSafety() {
                             </div>
                             <p className="myth-counter">{currentMythIndex + 1}/{myths.length}</p>
                             <div className="myths-slider">
-                                <div 
-                                    className={`myth ${myths[currentMythIndex].revealed ? (myths[currentMythIndex].isMyth ? 'busted' : 'confirmed') : ''}`} 
+                                <div
+                                    className={`myth ${myths[currentMythIndex].revealed ? (myths[currentMythIndex].isMyth ? 'busted' : 'confirmed') : ''}`}
                                     onClick={() => toggleMythStatus(myths[currentMythIndex].id)}>
                                     {myths[currentMythIndex].revealed ? (myths[currentMythIndex].isMyth ? "Busted!" : "Confirmed") : myths[currentMythIndex].text}
                                 </div>
@@ -91,7 +98,7 @@ function RoadSafety() {
                         </div>
                     )}
                     {selectedModule === 'Quiz' && (
-                        <Quiz /> 
+                        <Quiz />
                     )}
                 </div>
             </div>
