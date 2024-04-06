@@ -11,6 +11,11 @@
   top: 195px;
 }
 
+.sidebar h2 {
+  /* Styles for heading */
+  margin-bottom: 10px; /* Add some space below the heading */
+}
+
 .sidebar a {
   color: white; /* Set text color to white */
   text-transform: capitalize;
