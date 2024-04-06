@@ -8,6 +8,7 @@ function RoadSafety() {
     const [selectedModule, setSelectedModule] = useState('');
     const [currentMythIndex, setCurrentMythIndex] = useState(0);
     const [progress, setProgress] = useState(0);
+    const [showWelcome, setShowWelcome] = useState(true); 
     const [myths, setMyths] = useState([
         { id: 1, text: "It's fine to use your phone while you're driving if it's in a cradle", description: "Please avoid using mobile devices while driving. Driving requires your full attention", isMyth: true, revealed: false },
         { id: 2, text: "When approaching a roundabout always give way to your right",description:"Not just on your right. Drivers must slow or stop to give way to any vehicles already in the roundabout.", isMyth: true, revealed: false },
@@ -32,16 +33,25 @@ function RoadSafety() {
     const nextMyth = () => setCurrentMythIndex(prevIndex => (prevIndex + 1) % myths.length);
 
     const prevMyth = () => setCurrentMythIndex(prevIndex => (prevIndex - 1 + myths.length) % myths.length);
-
+    const closeWelcome = () => setShowWelcome(false);
     return (
         <div>
             <Header />
+            {showWelcome && (
+                <div className="welcome-overlay">
+                    <div className="welcome-message">
+                        <h2>Welcome to Road Safety Information!</h2>
+                        <p>This section provides essential information on road safety, including traffic signs, roadworks, and debunking common myths. Click on the different modules to learn more and test your knowledge with the quiz!</p>
+                        <button onClick={closeWelcome}>Explore</button>
+                    </div>
+                </div>
+            )}
             <div className="road-safety-container">
                 <aside className="sidebar">
                     <h1>Road Safety and Regulations</h1>
                     <ul>
                         <li className={selectedModule === 'Traffic signs' ? 'active' : ''} onClick={() => handleModuleClick('Traffic signs')}>Traffic signs</li>
-                        <li className={selectedModule === 'RoadWorks' ? 'active' : ''} onClick={() => handleModuleClick('RoadWorks')}>RoadWorks</li>
+                        <li className={selectedModule === 'Emergency Procedures' ? 'active' : ''} onClick={() => handleModuleClick('RoadWorks')}>RoadWorks</li>
                         <li className={selectedModule === 'Myth Buster' ? 'active' : ''} onClick={() => handleModuleClick('Myth Buster')}>Myth Buster</li>
                     </ul>
                     <h2>Check your learning</h2>
@@ -53,7 +63,7 @@ function RoadSafety() {
                     {selectedModule === 'Traffic signs' && (
                         <TrafficSigns />
                     )}
-                    {selectedModule === 'RoadWorks' && <h1>Roadworks Content</h1>}
+                    {selectedModule === 'Emergency Procedures' && <h1>Emergency Procedures Content</h1>}
                     {selectedModule === 'Myth Buster' && (
                         <div>
                             <h1>Myth Buster</h1>
