@@ -97,10 +97,6 @@ const Quiz = () => {
     const newUserAnswers = [...userAnswers];
     newUserAnswers[currentQuestion] = answerOption;
     setUserAnswers(newUserAnswers);
-
-    // Optionally move to the next question immediately upon selecting an answer
-    // Remove this line if you want users to manually click "Next" to proceed
-    handleNextQuestion();
   };
 
   // Function to advance to the next question
@@ -111,6 +107,11 @@ const Quiz = () => {
     } else {
       setShowReviewPage(true); // Show review page when all questions have been answered
     }
+  };
+  
+  // Function to check if the question is answered
+  const isQuestionAnswered = (index) => {
+    return userAnswers[index] !== null;
   };
 
   // Function to go back to the previous question
@@ -165,37 +166,52 @@ const Quiz = () => {
       <div className="back-link-container">
         <Link to="/beach-safety" className="back-to-beach-safety">&#8592; Back to Beach Safety</Link>
       </div>
-      {showReviewPage ? (
-        <ReviewPage />
-      ) : (
-        <>
-        <div className="progress-tracker">
-            Question {currentQuestion + 1} / {questions.length}
-          </div>
-          <div className="quiz-content">
-            <div className='question-section'>
-              <img src={questions[currentQuestion].imageSrc} alt="Question" className="question-image" />
-              <div className='question-text'>{questions[currentQuestion].questionText}</div>
-            </div>
-            <div className='answer-section'>
-              {questions[currentQuestion].answerOptions.map((answerOption, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleAnswerOptionClick(answerOption)}
-                  className={`answer-button ${userAnswers[currentQuestion]?.answerText === answerOption.answerText ? 'selected' : ''}`}
-                >
-                  {/* Prepend the letter label */}
-                  {String.fromCharCode(65 + index)}. {answerOption.answerText}
-                </button>
-              ))}
-            </div>
-          </div>
-          <div className="quiz-navigation">
-            {currentQuestion > 0 && <button onClick={handlePreviousQuestion}>Previous</button>}
-            {currentQuestion < questions.length - 1 && <button onClick={handleNextQuestion}>Next</button>}
-          </div>
-        </>
-      )}
+      <div className="quiz-layout">
+        <div className="quiz">
+          {showReviewPage ? (
+            <ReviewPage />
+          ) : (
+            <>
+              <div className="progress-tracker">
+                Question {currentQuestion + 1} / {questions.length}
+              </div>
+              <div className="quiz-content">
+                <div className='question-section'>
+                  <img src={questions[currentQuestion].imageSrc} alt="Question" className="question-image" />
+                  <div className='question-text'>{questions[currentQuestion].questionText}</div>
+                </div>
+                <div className='answer-section'>
+                  {questions[currentQuestion].answerOptions.map((answerOption, index) => (
+                    <button
+                      key={index}
+                      onClick={() => handleAnswerOptionClick(answerOption)}
+                      className={`answer-button ${userAnswers[currentQuestion]?.answerText === answerOption.answerText ? 'selected' : ''}`}
+                    >
+                      {String.fromCharCode(65 + index)}. {answerOption.answerText}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="sidebar">
+                <h3>Questions</h3>
+                {questions.map((_, index) => (
+                  <div key={index} className={`sidebar-item ${isQuestionAnswered(index) ? 'answered' : ''}`}>
+                    <span className="sidebar-item-icon">{isQuestionAnswered(index) ? '✔︎' : '?'}</span>
+                    <span className="sidebar-item-text">Question {index + 1}</span>
+                  </div>
+                ))}
+              </div>
+              <div className="quiz-navigation">
+                {currentQuestion > 0 && <button onClick={handlePreviousQuestion}>Previous</button>}
+                {currentQuestion < questions.length - 1 && (
+                  <button onClick={handleNextQuestion}>Next</button>
+                )}
+                {currentQuestion === questions.length - 1 && <button onClick={() => setShowReviewPage(true)}>Submit</button>}
+              </div>
+            </>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

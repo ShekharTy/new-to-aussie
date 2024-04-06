@@ -33,37 +33,59 @@
     text-align: left; /* Align the text to the left */
     margin-bottom: 10px; /* Add some space between the buttons */
     padding: 10px; /* Add padding inside the buttons */
-    /* Add other styles as needed */
+    border: 2px solid #007bff; /* Adds a border to make the button stand out */
+    border-radius: 15px; /* Smooths out the corners */
+    background-color: #f8f9fa; /* Light background color */
+    color: black; /* Text color */
+    cursor: pointer; /* Changes the cursor to indicate it's clickable */
+    transition: background-color 0.3s, color 0.3s;
   }
   
   .answer-button:hover {
-    /* Hover state for buttons */
     background-color: #ececec;
   }
   
   .answer-button.selected {
-    /* Style for the selected answer */
-    border-color: blue
+    background-color: #007bff; /* Changes the background color to indicate selection */
+    color: white; /* Changes the text color to white for better contrast */
+    border-color: #0056b3; 
   }
 
+  .quiz-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Adjust to evenly distribute content */
+  }
+  
+  .quiz {
+    flex-grow: 1; /* Ensure the quiz content takes up remaining space */
+    margin-right: 20px; /* Add space between quiz content and sidebar */
+  }
+  
   .quiz-navigation {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: row; /* Display buttons in a row */
+    justify-content: flex-end; /* Align buttons to the end of the container */
   }
   
   .quiz-navigation button {
-    background-color: #007bff;
+    background-color: #007bff; /* Set button color */
     color: white;
     border: none;
     padding: 10px 20px;
     margin: 0 10px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
   }
   
   .quiz-navigation button:hover {
     background-color: #0056b3;
   }
   
+  .quiz-navigation button:first-child {
+    background-color: #28a745; /* Set previous button color */
+  }
 
   .quiz-container, .review-page {
     display: flex;
@@ -156,3 +178,28 @@
     margin-top: 20px; /* Adds some space between the review items and the button */
   }
   
+  sidebar {
+    width: 200px; /* Adjust sidebar width */
+    background-color: #f0f0f0; /* Set sidebar background color */
+    border-radius: 5px; /* Optional: add border radius for aesthetics */
+    padding: 10px; /* Add padding to sidebar content */
+  }
+  
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust content spacing */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Add space between sidebar items */
+  }
+  
+  .sidebar-item.answered {
+    background-color: #e0ffe0; /* Set background color for answered items */
+  }
+  
+  .sidebar-item.answered::after {
+    content: '✓'; /* Use the correct Unicode character for the checkmark */
+    color: green; /* Set color for the checkmark */
+    font-size: 20px; /* Adjust checkmark size */
+  }
