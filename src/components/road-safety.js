@@ -3,6 +3,7 @@ import Header from './header';
 import Footer from './footer';
 import '../styles/road-safety.css';
 import TrafficSigns from './traffic-sign';
+import Quiz from './quiz';
 
 function RoadSafety() {
     const [selectedModule, setSelectedModule] = useState('');
@@ -51,7 +52,7 @@ function RoadSafety() {
                     <h1>Road Safety and Regulations</h1>
                     <ul>
                         <li className={selectedModule === 'Traffic signs' ? 'active' : ''} onClick={() => handleModuleClick('Traffic signs')}>Traffic signs</li>
-                        <li className={selectedModule === 'Emergency Procedures' ? 'active' : ''} onClick={() => handleModuleClick('RoadWorks')}>RoadWorks</li>
+                        <li className={selectedModule === 'Emergency Procedures' ? 'active' : ''} onClick={() => handleModuleClick('Emergency Procedures')}>Emergency Procedures</li>
                         <li className={selectedModule === 'Myth Buster' ? 'active' : ''} onClick={() => handleModuleClick('Myth Buster')}>Myth Buster</li>
                     </ul>
                     <h2>Check your learning</h2>
@@ -88,6 +89,9 @@ function RoadSafety() {
                                 <button onClick={nextMyth}>Next Myth</button>
                             </div>
                         </div>
+                    )}
+                    {selectedModule === 'Quiz' && (
+                        <Quiz /> 
                     )}
                 </div>
             </div>
