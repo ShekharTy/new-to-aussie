@@ -39,15 +39,15 @@ function RoadSafety() {
             <Header />
             {showWelcome && (
                 <div className="welcome-overlay">
-                    <div className="welcome-message">
-                        <h2>Welcome to Road Safety Information!</h2>
-                        <p>This section provides essential information on road safety, including traffic signs, roadworks, and debunking common myths. Click on the different modules to learn more and test your knowledge with the quiz!</p>
+                    <div className="welcome-message-road">
+                        <h2>Welcome to Road Safety Module!</h2>
+                        <p>This section provides essential information on road safety, including traffic signs, roadworks, and debunking common myths.<br/> Click on the different modules to learn more and test your knowledge with the quiz!</p>
                         <button onClick={closeWelcome}>Explore</button>
                     </div>
                 </div>
             )}
-            <div className="road-safety-container">
-                <aside className="sidebar">
+            <div className={`road-safety-container ${showWelcome ? 'blur-effect' : ''}`}>
+            <aside className={`sidebar ${showWelcome ? 'blur-effect' : ''}`}>
                     <h1>Road Safety and Regulations</h1>
                     <ul>
                         <li className={selectedModule === 'Traffic signs' ? 'active' : ''} onClick={() => handleModuleClick('Traffic signs')}>Traffic signs</li>
