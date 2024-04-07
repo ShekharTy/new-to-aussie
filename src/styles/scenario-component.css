@@ -29,4 +29,11 @@
     color: red;
     font-style: italic;
   }
+
+  /* Reduce image size */
+.scenario-container img {
+  max-width: 20%;
+  height: auto;
+}
+
   
