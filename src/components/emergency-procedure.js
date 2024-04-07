@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import '../styles/emergency-procedure.css';
+import VehicleBreakdown from '../data/vb_bg2.jpg';
+import Flood from '../data/flood.jpg'
+import Fire from '../data/Fire.jpg';
+import Crash from '../data/Crash.jpg';
 
 const emergencyProcedures = [
     {
         title: 'Vehicle Breakdown',
-        imgSrc: '/path/to/vehicle-breakdown-image.jpg',
+        imgSrc: VehicleBreakdown,
         content: [
             "Pull Over Safely",
             "Turn On Your Hazard Lights",
@@ -14,7 +18,7 @@ const emergencyProcedures = [
     },
     {
         title: 'Accident Involvement',
-        imgSrc: '/path/to/accident-involvement-image.jpg',
+        imgSrc: Crash,
         content: [
             "Move to a safe location if possible, then stop",
             "Turn on your hazard lights",
@@ -24,7 +28,7 @@ const emergencyProcedures = [
     },
     {
         title: 'Fire',
-        imgSrc: '/path/to/fire-image.jpg',
+        imgSrc: Fire,
         content: [
             "Pull over and shut off the engine as soon as it’s safe",
             "Get everyone out of the vehicle without delay",
@@ -34,7 +38,7 @@ const emergencyProcedures = [
     },
     {
         title: 'Flooding',
-        imgSrc: '/path/to/flooding-image.jpg',
+        imgSrc: Flood,
         content: [
             "Never drive through flooded areas",
             "Seek higher ground",
