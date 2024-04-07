@@ -76,6 +76,7 @@ function RoadSafety() {
                     {selectedModule === 'Myth Buster' && (
                         <div>
                             <h1>Myth Buster</h1>
+                            <p className="traffic-instructions">Click on the circle to bust myths. Use the buttons below to navigate between myths.</p>
                             <div className="progress-container">
                                 <div className="progress-bar" style={{ width: `${progress}%` }}></div>
                             </div>
