@@ -1,0 +1,41 @@
+/* Sidebar.css */
+
+.sidebar {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
+  background-color: #1E90FF;
+  font-weight: bold;
+  top: 195px;
+}
+
+.sidebar h2 {
+  /* Styles for heading */
+  margin-bottom: 10px; /* Add some space below the heading */
+}
+
+.sidebar a {
+  color: white; /* Set text color to white */
+  text-transform: capitalize;
+  
+}
+
+.sidebar.closed {
+  left: -250px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: underline;
+  color: #333;
+}

@@ -1,0 +1,45 @@
+/* beach-safety.css */
+body{
+  font-family: 'Arial';
+}
+
+.body {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 350px; 
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: white;
+    
+  }
+  
+  .main-content {
+    z-index: 1; 
+  }
+
+  .beach-safety-list {
+    list-style-type: none;
+    counter-reset: beach-counter;
+    padding-left: 0;
+  }
+  
+  .beach-safety-list li {
+    counter-increment: beach-counter;
+    margin-bottom: 15px;
+    color: blue;
+  }
+  
+  .beach-safety-list li::before {
+    content: counter(beach-counter) ".";
+    color: #007bff; /* Change color as needed */
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  

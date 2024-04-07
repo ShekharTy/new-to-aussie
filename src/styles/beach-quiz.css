@@ -1,0 +1,205 @@
+.review-page {
+    /* Styles for the review page layout */
+  }
+  
+  .review-item {
+    margin-bottom: 20px;
+  }
+  
+  .review-item .question-text {
+    font-weight: bold;
+  }
+  
+  .review-item .answers {
+    margin-top: 10px;
+  }
+  
+  .review-item .answer {
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block; /* or block if you want each answer to be on a new line */
+  }
+  
+  .review-item .answer.correct {
+    color: green;
+  }
+  
+  .review-item .answer.incorrect {
+    color: red;
+  }
+  
+  .answer-button {
+    display: block; /* Ensure each button is on a new line */
+    text-align: left; /* Align the text to the left */
+    margin-bottom: 10px; /* Add some space between the buttons */
+    padding: 10px; /* Add padding inside the buttons */
+    border: 2px solid #007bff; /* Adds a border to make the button stand out */
+    border-radius: 15px; /* Smooths out the corners */
+    background-color: #f8f9fa; /* Light background color */
+    color: black; /* Text color */
+    cursor: pointer; /* Changes the cursor to indicate it's clickable */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .answer-button:hover {
+    background-color: #ececec;
+  }
+  
+  .answer-button.selected {
+    background-color: #007bff; /* Changes the background color to indicate selection */
+    color: white; /* Changes the text color to white for better contrast */
+    border-color: #0056b3; 
+  }
+
+  .quiz-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Adjust to evenly distribute content */
+  }
+  
+  .quiz {
+    flex-grow: 1; /* Ensure the quiz content takes up remaining space */
+    margin-right: 20px; /* Add space between quiz content and sidebar */
+  }
+  
+  .quiz-navigation {
+    display: flex;
+    flex-direction: row; /* Display buttons in a row */
+    justify-content: flex-end; /* Align buttons to the end of the container */
+  }
+  
+  .quiz-navigation button {
+    background-color: #007bff; /* Set button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .quiz-navigation button:hover {
+    background-color: #0056b3;
+  }
+  
+  .quiz-navigation button:first-child {
+    background-color: #28a745; /* Set previous button color */
+  }
+
+  .quiz-container, .review-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .quiz-content, .question-section, .answer-section, .quiz-navigation {
+    width: 100%; /* Adjust the width as necessary */
+    max-width: 600px; /* Set a max-width for larger screens */
+    margin: auto;
+  }
+  
+  .question-image {
+    max-width: 200px; 
+    height: auto;
+    margin: 20px auto; 
+    display: block; 
+  }
+  
+  .reset-quiz-btn {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .reset-quiz-btn:hover {
+    background-color: #45a049; /* Darker green */
+  }
+
+  .back-arrow {
+    position: absolute;
+    top: 70px; /* Adjust this value if necessary based on the height of your Header */
+    left: 20px; /* Or however much you want to offset from the left side */
+    z-index: 10; /* Makes sure the link is clickable even if other elements overlap */
+  }
+  
+  .quiz-container {
+    text-align: left;
+  }
+  
+  .back-to-beach-safety {
+    display: block; /* Makes it a block-level element */
+    margin-top: 20px; /* Adds space between the header and the arrow, adjust as needed */
+    font-size: 24px; /* Adjust the font size as desired */
+    text-decoration: none; /* Removes the underline from the link */
+    color: #007bff; /* Sets the color, change as needed */
+    padding-left: 0; /* Aligns the link to the very left edge of its container */
+    margin-left: 0; /* Ensures it starts at the very left with no additional margin */
+    text-align: left; /* Aligns the text inside the link to the left */
+  }
+  
+  .back-link-container {
+    width: 100%; /* Full width to stretch across the container */
+    text-align: left; /* Align text to the left */
+  }
+
+  .progress-tracker {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  /* Add styles for the progress bar container if you choose to use a visual progress bar */
+  .progress-bar-container {
+    width: 100%;
+    background-color: #ddd;
+    margin-bottom: 20px;
+  }
+  
+  .progress-bar {
+    height: 20px;
+    background-color: #4CAF50;
+    width: 0%; /* Initially, it should be 0 and will be set dynamically */
+  }
+  
+  /* The reset button can be styled further if needed */
+  .reset-quiz-btn {
+    /* ... existing styles */
+    margin-top: 20px; /* Adds some space between the review items and the button */
+  }
+  
+  sidebar {
+    width: 200px; /* Adjust sidebar width */
+    background-color: #f0f0f0; /* Set sidebar background color */
+    border-radius: 5px; /* Optional: add border radius for aesthetics */
+    padding: 10px; /* Add padding to sidebar content */
+  }
+  
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust content spacing */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Add space between sidebar items */
+  }
+  
+  .sidebar-item.answered {
+    background-color: #e0ffe0; /* Set background color for answered items */
+  }
+  
+  .sidebar-item.answered::after {
+    content: '✓'; /* Use the correct Unicode character for the checkmark */
+    color: green; /* Set color for the checkmark */
+    font-size: 20px; /* Adjust checkmark size */
+  }
