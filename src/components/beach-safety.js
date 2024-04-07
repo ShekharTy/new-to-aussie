@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Header from './header';
 import '../styles/beach-safety.css';
 import Sidebar from '../components/sidebar';
-import Quiz from './beach-quiz';
 
 function BeachSafety() {
     useEffect(() => {

@@ -1,41 +1,39 @@
-/* Sidebar.css */
-
 .sidebar {
-  display: flex; 
-  flex-direction: column; 
-  align-items: center;
-  justify-content: space-between;
-  padding: 1%;
-  background-color: #1E90FF;
-  font-weight: bold;
-  top: 195px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: flex-start; 
+  padding: 20px; 
+  background-color: #1E90FF; 
+  color: white; 
 }
 
-.sidebar h2 {
-  /* Styles for heading */
-  margin-bottom: 10px; /* Add some space below the heading */
+.sidebar ul {
+  list-style-type: none; 
+  padding: 0; 
+  width: 100%; 
+}
+
+.sidebar li {
+  margin-bottom: 15px;
+}
+
+.sidebar li.active {
+  font-weight: bold; 
+  background-color: #007BFF; 
 }
 
 .sidebar a {
-  color: white; /* Set text color to white */
-  text-transform: capitalize;
-  
+  color: white; 
+  text-decoration: none; 
+  display: block; 
+  padding: 10px; 
 }
 
-.sidebar.closed {
-  left: -250px;
+.sidebar a:hover {
+  background-color: #0056b3;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin-bottom: 20px;
-}
-
-a {
-  text-decoration: underline;
-  color: #333;
+.sidebar h2{
+  color: white;
 }

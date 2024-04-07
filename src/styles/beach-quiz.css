@@ -1,7 +1,4 @@
-.review-page {
-    /* Styles for the review page layout */
-  }
-  
+
   .review-item {
     margin-bottom: 20px;
   }
@@ -17,7 +14,7 @@
   .review-item .answer {
     padding: 5px;
     border-radius: 5px;
-    display: inline-block; /* or block if you want each answer to be on a new line */
+    display: inline-block; 
   }
   
   .review-item .answer.correct {
@@ -27,17 +24,19 @@
   .review-item .answer.incorrect {
     color: red;
   }
-  
+  .sidebar h3{
+    color: white;
+  }
   .answer-button {
-    display: block; /* Ensure each button is on a new line */
-    text-align: left; /* Align the text to the left */
-    margin-bottom: 10px; /* Add some space between the buttons */
-    padding: 10px; /* Add padding inside the buttons */
-    border: 2px solid #007bff; /* Adds a border to make the button stand out */
-    border-radius: 15px; /* Smooths out the corners */
-    background-color: #f8f9fa; /* Light background color */
-    color: black; /* Text color */
-    cursor: pointer; /* Changes the cursor to indicate it's clickable */
+    display: block;
+    text-align: left; 
+    margin-bottom: 10px; 
+    padding: 10px; 
+    border: 2px solid #007bff; 
+    border-radius: 15px; 
+    background-color: #f8f9fa; 
+    color: black;
+    cursor: pointer; 
     transition: background-color 0.3s, color 0.3s;
   }
   
@@ -46,30 +45,30 @@
   }
   
   .answer-button.selected {
-    background-color: #007bff; /* Changes the background color to indicate selection */
-    color: white; /* Changes the text color to white for better contrast */
+    background-color: #007bff; 
+    color: white; 
     border-color: #0056b3; 
   }
 
   .quiz-layout {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Adjust to evenly distribute content */
+    justify-content: space-between; 
   }
   
   .quiz {
-    flex-grow: 1; /* Ensure the quiz content takes up remaining space */
-    margin-right: 20px; /* Add space between quiz content and sidebar */
+    flex-grow: 1;
+    margin-right: 20px;
   }
   
   .quiz-navigation {
     display: flex;
-    flex-direction: row; /* Display buttons in a row */
-    justify-content: flex-end; /* Align buttons to the end of the container */
+    flex-direction: row; 
+    justify-content: flex-end; 
   }
   
   .quiz-navigation button {
-    background-color: #007bff; /* Set button color */
+    background-color: #007bff; 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -84,7 +83,7 @@
   }
   
   .quiz-navigation button:first-child {
-    background-color: #28a745; /* Set previous button color */
+    background-color: #28a745; 
   }
 
   .quiz-container, .review-page {
@@ -96,8 +95,8 @@
   }
   
   .quiz-content, .question-section, .answer-section, .quiz-navigation {
-    width: 100%; /* Adjust the width as necessary */
-    max-width: 600px; /* Set a max-width for larger screens */
+    width: 100%;
+    max-width: 600px; 
     margin: auto;
   }
   
@@ -109,7 +108,7 @@
   }
   
   .reset-quiz-btn {
-    background-color: #4CAF50; /* Green background */
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -122,14 +121,14 @@
   }
   
   .reset-quiz-btn:hover {
-    background-color: #45a049; /* Darker green */
+    background-color: #45a049; 
   }
 
   .back-arrow {
     position: absolute;
-    top: 70px; /* Adjust this value if necessary based on the height of your Header */
-    left: 20px; /* Or however much you want to offset from the left side */
-    z-index: 10; /* Makes sure the link is clickable even if other elements overlap */
+    top: 70px; 
+    left: 20px;
+    z-index: 10; 
   }
   
   .quiz-container {
@@ -137,19 +136,19 @@
   }
   
   .back-to-beach-safety {
-    display: block; /* Makes it a block-level element */
-    margin-top: 20px; /* Adds space between the header and the arrow, adjust as needed */
-    font-size: 24px; /* Adjust the font size as desired */
-    text-decoration: none; /* Removes the underline from the link */
-    color: #007bff; /* Sets the color, change as needed */
-    padding-left: 0; /* Aligns the link to the very left edge of its container */
-    margin-left: 0; /* Ensures it starts at the very left with no additional margin */
-    text-align: left; /* Aligns the text inside the link to the left */
+    display: block; 
+    margin-top: 20px; 
+    font-size: 24px; 
+    text-decoration: none; 
+    color: #007bff; 
+    padding-left: 0; 
+    margin-left: 0; 
+    text-align: left; 
   }
   
   .back-link-container {
-    width: 100%; /* Full width to stretch across the container */
-    text-align: left; /* Align text to the left */
+    width: 100%; 
+    text-align: left; 
   }
 
   .progress-tracker {
@@ -159,7 +158,6 @@
     font-size: 18px;
   }
   
-  /* Add styles for the progress bar container if you choose to use a visual progress bar */
   .progress-bar-container {
     width: 100%;
     background-color: #ddd;
@@ -169,37 +167,37 @@
   .progress-bar {
     height: 20px;
     background-color: #4CAF50;
-    width: 0%; /* Initially, it should be 0 and will be set dynamically */
+    width: 0%; 
   }
   
-  /* The reset button can be styled further if needed */
   .reset-quiz-btn {
     /* ... existing styles */
-    margin-top: 20px; /* Adds some space between the review items and the button */
+    margin-top: 20px; 
   }
   
   sidebar {
-    width: 200px; /* Adjust sidebar width */
-    background-color: #f0f0f0; /* Set sidebar background color */
-    border-radius: 5px; /* Optional: add border radius for aesthetics */
-    padding: 10px; /* Add padding to sidebar content */
+    width: 350px; 
+    background-color: #f0f0f0; 
+    border-radius: 5px;
+    padding: 10px; 
+    background-color: #1E90FF;
   }
   
   .sidebar-item {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Adjust content spacing */
-    padding: 10px;
+    justify-content: space-between; 
+    padding: 20px;
     border-radius: 5px;
-    margin-bottom: 10px; /* Add space between sidebar items */
+    margin-bottom: 10px;
   }
   
   .sidebar-item.answered {
-    background-color: #e0ffe0; /* Set background color for answered items */
+    background-color: #0056b3;
   }
   
   .sidebar-item.answered::after {
-    content: '✓'; /* Use the correct Unicode character for the checkmark */
-    color: green; /* Set color for the checkmark */
-    font-size: 20px; /* Adjust checkmark size */
+    content: '✓'; 
+    color: green; 
+    font-size: 20px; 
   }
