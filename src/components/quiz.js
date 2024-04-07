@@ -79,22 +79,22 @@ function Quiz() {
     const progressWidth = ((currentQuestion + 1) / questions.length) * 100 + '%';
 
     return (
-        <div className='quiz'>
+        <div className='quiz-rs'>
             {showScore ? (
-                <div className='score-section'>
+                <div className='score-section-rs'>
                     You scored {score} out of {questions.length}
-                    <button onClick={restartQuiz} className="restart-button">Restart Quiz</button>
+                    <button onClick={restartQuiz} className="restart-button-rs">Restart Quiz</button>
                 </div>
             ) : (
                 <>
-                    <div className='progress-bar' style={{width: progressWidth}}></div>
-                    <div className='question-section'>
-                        <div className='question-count'>
+                    <div className='progress-bar-rs' style={{width: progressWidth}}></div>
+                    <div className='question-section-rs'>
+                        <div className='question-count-rs'>
                             <span>Question {currentQuestion + 1}</span>/{questions.length}
                         </div>
-                        <div className='question-text'>{questions[currentQuestion].questionText}</div>
+                        <div className='question-text-rs'>{questions[currentQuestion].questionText}</div>
                     </div>
-                    <div className='answer-section'>
+                    <div className='answer-section-rs'>
                         {questions[currentQuestion].answerOptions.map((answerOption, index) => (
                             <button onClick={() => handleAnswerButtonClick(answerOption.isCorrect)} key={index}>
                                 {answerOption.answerText}

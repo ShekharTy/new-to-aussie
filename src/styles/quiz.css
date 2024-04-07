@@ -1,4 +1,4 @@
-.quiz {
+.quiz-rs {
     max-width: 600px;
     margin: 2rem auto;
     padding: 1rem;
@@ -8,29 +8,29 @@
     font-family: 'Arial', sans-serif;
 }
 
-.question-section, .score-section {
+.question-section-rs, .score-section-rs {
     margin-bottom: 2rem;
 }
 
-.question-count {
+.question-count-rs {
     margin-bottom: 1rem;
     font-size: 1rem;
     color: #555;
 }
 
-.question-text {
+.question-text-rs {
     margin-bottom: 2rem;
     font-size: 1.25rem;
     font-weight: bold;
     color: #333;
 }
 
-.answer-section {
+.answer-section-rs {
     display: flex;
     flex-direction: column;
 }
 
-.answer-section button {
+.answer-section-rs button {
     background-color: #0085FF;
     color: #fff;
     border: none;
@@ -42,24 +42,24 @@
     font-size: 1rem;
 }
 
-.answer-section button:hover {
+.answer-section-rs button:hover {
     background-color: #1C5D99;
     transform: scale(1.02);
 }
 
-.answer-section button:focus {
+.answer-section-rs button:focus {
     outline: none;
     box-shadow: 0 0 0 2px #005f73;
 }
 
-.score-section {
+.score-section-rs {
     text-align: center;
     font-size: 1.5rem;
     font-weight: bold;
     color: #333;
 }
 
-.score-section {
+.score-section-rs {
     background-color: #4CAF50;
     color: #fff;
     padding: 20px;
@@ -67,23 +67,23 @@
 }
 
 @media (max-width: 640px) {
-    .quiz {
+    .quiz-rs {
         padding: 1rem;
     }
 
-    .question-text, .score-section {
+    .question-text-rs, .score-section-rs {
         font-size: 1rem;
     }
 }
 
-.progress-bar {
+.progress-bar-rs {
     height: 20px;
     background-color: #4caf50;
     border-radius: 5px;
     margin-bottom: 20px;
 }
 
-.restart-button {
+.restart-button-rs {
     display: block;
     width: 100%;
     padding: 10px;
@@ -95,6 +95,6 @@
     cursor: pointer;
 }
 
-.restart-button:hover {
+.restart-button-rs:hover {
     background-color: #BEDCFE;
 }

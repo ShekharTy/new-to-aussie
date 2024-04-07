@@ -22,7 +22,7 @@ function Footer() {
           <div className="footer-link" onClick={() => navigate('/')}>Home</div>
           <div className="footer-link" onClick={() => navigate('/road-safety')}>Road Safety</div>
           <div className="footer-link" onClick={() => navigate('/beach-safety')}>Beach Safety</div>
-          <div className="footer-link" onClick={() => navigate('/attributions')}>Attributions</div>
+          <div className="footer-link" onClick={() => navigate('/attribution')}>Attributions</div>
         </div>
       </div>
       <div className="footer-lower">

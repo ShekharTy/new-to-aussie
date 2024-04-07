@@ -4,6 +4,7 @@ import Footer from './footer';
 import '../styles/road-safety.css';
 import TrafficSigns from './traffic-sign';
 import Quiz from './quiz';
+import EmergencyProcedure from './emergency-procedure';
 
 function RoadSafety() {
     const [selectedModule, setSelectedModule] = useState('');
@@ -71,7 +72,7 @@ function RoadSafety() {
                     {selectedModule === 'Traffic signs' && (
                         <TrafficSigns />
                     )}
-                    {selectedModule === 'Emergency Procedures' && <h1>Emergency Procedures Content</h1>}
+                    {selectedModule === 'Emergency Procedures' && <EmergencyProcedure />}
                     {selectedModule === 'Myth Buster' && (
                         <div>
                             <h1>Myth Buster</h1>
