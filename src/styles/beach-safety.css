@@ -1,6 +1,6 @@
 /* beach-safety.css */
 body{
-  font-family: 'Arial';
+  font-family: 'Cabin', sans-serif; /* Apply Cabin font to all text */
 }
 
 .body {
