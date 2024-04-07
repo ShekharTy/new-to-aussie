@@ -16,29 +16,25 @@ function BeachSafety() {
             <div className="body">
                 <Sidebar />
                 <div className="main-content">
-                    <h1>Enjoy the Beach, Stay Safe!</h1>
+                    <h1>Beach Safety Module</h1>
                     <p>
-                        Beach safety is crucial for ensuring a fun and secure experience by the seaside. Here are some important beach safety rules you can learn in below modules 
-                        and test your skills with an interactive quiz!
+                        Welcome to the Beach Safety Module, your comprehensive guide to staying safe and informed while enjoying the coastal beauty.
                     </p>
-                    <h2>Learning Modules</h2>
-                    <ul className="beach-safety-list">
-                        <li>
-                            <Link to="/swimsafety">Learn Beach Safety & Regulation Signs</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/warning">Learn Beach Warning Signs</Link>
-                        </li>
-
-                        <li>
-                            <Link to="/beach-quiz">Check your learnings - Quiz </Link>
-                        </li>
-                        
-                        <li>
-                            <Link to="/scenario-component">Scenario Based Learning Module </Link>
-                        </li>
-                    </ul>
+                    <p>
+                        In this module, you'll dive deep into the essential aspects of beach safety, covering everything from flag signs to scenario-based learning. Our goal is to empower you with the knowledge and skills needed to navigate the beach environment confidently.
+                    </p>
+                    <p>
+                        Throughout this module, you'll explore:
+                    </p>
+                    <ol>
+                        <li>Beach Flag Signs: Learn to understand the meaning behind various flag colours.</li>
+                        <li>Warning Signs: Familiarise yourself with common warning signs found at beaches.</li>
+                        <li>Scenario-Based Learning: Engage in interactive scenarios that simulate real-life beach situations, allowing you to make informed decisions.</li>
+                        <li>Knowledge Check: Test your understanding of beach safety concepts with quizzes designed to reinforce key information and ensure you're well-prepared to tackle any beach-related challenges.</li>
+                    </ol>
+                    <p>
+                        By the end of this module, you'll emerge as a savvy beachgoer equipped with the skills and awareness needed to enjoy the coastal wonders responsibly. So grab your sunscreen, pack your beach gear, and let's embark on a journey to discover the beauty of the beach while prioritising safety every step of the way.
+                    </p>
                 </div>
             </div>
         </div>
