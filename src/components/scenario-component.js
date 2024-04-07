@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/scenario-component.css';
-
+// Beach Safety V2
 function ScenarioComponent() {
   const scenarios = [
     {
