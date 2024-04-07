@@ -48,14 +48,14 @@ function RoadSafety() {
                 </div>
             )}
             <div className={`road-safety-container ${showWelcome ? 'blur-effect' : ''}`}>
-                <aside className={`sidebar ${showWelcome ? 'blur-effect' : ''}`}>
+                <aside className={`road-safety-sidebar ${showWelcome ? 'blur-effect' : ''}`}>
                     <h1>Road Safety and Regulations</h1>
                     <ul>
                         <li className={selectedModule === 'Traffic signs' ? 'active' : ''} onClick={() => handleModuleClick('Traffic signs')}>Traffic signs</li>
                         <li className={selectedModule === 'Emergency Procedures' ? 'active' : ''} onClick={() => handleModuleClick('Emergency Procedures')}>Emergency Procedures</li>
                         <li className={selectedModule === 'Myth Buster' ? 'active' : ''} onClick={() => handleModuleClick('Myth Buster')}>Myth Buster</li>
                     </ul>
-                    <h2>Check your learning</h2>
+                    <h1>Check your learning</h1>
                     <ul>
                         <li className={selectedModule === 'Quiz' ? 'active' : ''} onClick={() => handleModuleClick('Quiz')}>Quiz</li>
                     </ul>

@@ -6,7 +6,7 @@
     font-family: 'Cabin';
 }
 
-.sidebar {
+.road-safety-sidebar {
     flex: 0 0 350px; 
     background-color: #0085FF;
     padding: 30px;
@@ -16,22 +16,23 @@
     color: white;
 }
 
-.sidebar h1, .sidebar ul li {
+.road-safety-sidebar h1, .road-safety-sidebar ul li {
     margin-top: 0;
+    color: white;
 }
 
-.sidebar ul {
+.road-safety-sidebar ul {
     list-style-type: none;
     padding: 0;
 }
 
-.sidebar ul li {
+.road-safety-sidebar ul li {
     padding: 10px;
     cursor: pointer;
     font-size: large;
 }
 
-.sidebar ul li:hover, .sidebar ul li.active {
+.road-safety-sidebar ul li:hover, .road-safety-sidebarul li.active {
     background-color: #1C5D99;
 }
 

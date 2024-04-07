@@ -2,12 +2,12 @@
 
 html,
 body,
-.page-container {
+.page-container-home {
     height: 100%;
     margin: 0;
 }
 
-.page-container {
+.page-container-home {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -17,14 +17,14 @@ body,
     flex: 1;
 }
 
-.image-message-container {
+.image-message-container-home {
     margin-top: 20px;
     position: relative;
     text-align: center;
     font-family: 'Cabin';
 }
 
-.welcome-message {
+.welcome-message-home {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -34,7 +34,9 @@ body,
     transform: scale(1.85);
     background-color: rgba(255, 255, 255, 0.7);
 }
-
+.welcome-message-home h1, .welcome-message-home h4{
+    color: black;
+}
 .bg-img {
     width: 1800px;
     height: 700px;

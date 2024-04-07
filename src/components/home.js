@@ -16,11 +16,11 @@ function Homepage() {
     };
 
     return (
-        <div className="page-container">
+        <div className="page-container-home">
             <Header />
-            <div className="image-message-container">
+            <div className="image-message-container-home">
                 <img className='bg-img' src={bgimg} alt="Background"></img>
-                <div className="welcome-message">
+                <div className="welcome-message-home">
                     <h1>WELCOME TO VICTORIA</h1>
                     <h4>STAY SAFE AND ENJOY</h4>
                 </div>
