@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
 .header {
-    display: flex; 
-    flex-direction: column; 
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding: 1%;
-    background-color: #1C5D99;
+    background-color: #BEDCFE;
 }
 
 .header img {
@@ -12,18 +13,20 @@
     margin-bottom: 20px;
 }
 
+.header img:hover {
+    cursor: pointer;
+}
+
 .header button {
-    background-color: #1C5D99;
-    border: 2px solid transparent; 
-    cursor: pointer; 
+    background-color: #BEDCFE;
+    border: 2px solid transparent;
+    cursor: pointer;
     padding: 5px 10px;
     font-size: x-large;
     margin: 20px;
-    color: white;
+    font-family: 'Cabin';
 }
 
 .header button:hover {
-    border-color: #BEDCFE;
+    border-color: black;
 }
-
-

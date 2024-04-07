@@ -13,7 +13,7 @@ function Header() {
       <button onClick={() => navigate('/home')}>Home</button>
       <button onClick={() => navigate('/road-safety')}>Road Safety</button>
       <button onClick={() => navigate('/beach-safety')}>Beach Safety</button>
-      <button onClick={() => navigate('/attributions')}>Attributions</button>
+      <button onClick={() => navigate('/attribution')}>Attributions</button>
       </div>
     </div>
   );

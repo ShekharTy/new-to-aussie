@@ -16,7 +16,7 @@ function Footer() {
     <footer className='footer'>
       <div className="footer-upper">
         <div className="project-description">
-          New To Aussie project was developed in the hopes that overseas visitors coming to Australia for the first time will have a go-to guide for safety rules and regulations in one place. This website helps visitors learn through the help of gamified learning making their experience more engaging.
+          New To Aussie project is being developed in the hopes that overseas visitors coming to Australia for the first time will have a go-to guide for safety rules and regulations including social etiquettes in one place. This website helps visitors learn through the help of gamified learning making their experience more engaging.
         </div>
         <div className="useful-links">
           <div className="footer-link" onClick={() => navigate('/')}>Home</div>
@@ -26,9 +26,6 @@ function Footer() {
         </div>
       </div>
       <div className="footer-lower">
-        <div className="contact-info">
-          Contact us at: project@example.com
-        </div>
         <button onClick={goToTop} className="back-to-top">Back to Top</button>
         <div className="copyright">
           Copyright © 2024 Dumb Legends
