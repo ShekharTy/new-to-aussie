@@ -8,6 +8,7 @@ import Warning from './components/warning';
 import Quiz from './components/beach-quiz';
 import ScenarioComponent from './components/scenario-component';
 import Attributions from './components/attribution';
+import NotFoundPage from './components/not-found';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/beach-quiz" element={<Quiz />} />
         <Route path="/scenario-component" element={<ScenarioComponent />} />
         <Route path="/attribution" element={<Attributions />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
   );

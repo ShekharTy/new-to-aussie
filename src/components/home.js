@@ -23,7 +23,7 @@ function Homepage() {
                 <div className="welcome-message-home">
                     <h1>Welcome to New To Aussie</h1>
                     <h4>Your Essential Guide to Navigating Victoria Safely</h4>
-                    <button className="start-exploring-btn" onClick={() => handleNavigate('/overview')}>Start Exploring</button> {/* Primary CTA */}
+                    <button className="start-exploring-btn" onClick={() => handleNavigate('/road-safety')}>Start Exploring</button> {/* Primary CTA */}
                 </div>
             </div>
             <div className="safety-sections">
