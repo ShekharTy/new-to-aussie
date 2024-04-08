@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Header from './header';
 import '../styles/beach-quiz.css';
 
 
@@ -162,7 +161,6 @@ const Quiz = () => {
 
   return (
     <div className="quiz-container">
-      <Header />
       <div className="back-link-container">
         <Link to="/beach-safety" className="back-to-beach-safety">&#8592; Back to Beach Safety</Link>
       </div>
@@ -192,15 +190,7 @@ const Quiz = () => {
                   ))}
                 </div>
               </div>
-              <div className="sidebar">
-                <h3>Questions</h3>
-                {questions.map((_, index) => (
-                  <div key={index} className={`sidebar-item ${isQuestionAnswered(index) ? 'answered' : ''}`}>
-                    <span className="sidebar-item-icon">{isQuestionAnswered(index) ? '✔︎' : '?'}</span>
-                    <span className="sidebar-item-text">Question {index + 1}</span>
-                  </div>
-                ))}
-              </div>
+              
               <div className="quiz-navigation">
                 {currentQuestion > 0 && <button onClick={handlePreviousQuestion}>Previous</button>}
                 {currentQuestion < questions.length - 1 && (

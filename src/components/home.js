@@ -21,8 +21,16 @@ function Homepage() {
             <div className="image-message-container-home">
                 <img className='bg-img' src={bgimg} alt="Background"></img>
                 <div className="welcome-message-home">
-                    <h1>WELCOME TO VICTORIA</h1>
-                    <h4>STAY SAFE AND ENJOY</h4>
+                    <h1>Prepare with New To Aussie</h1>
+                    <h4>Stay Safe on Your Australian Journey</h4>
+                </div>
+            </div>
+            <div className="safety-sections">
+                <div className="safety-container road-safety" onClick={() => handleNavigate('/road-safety')}>
+                    <div className="safety-text">Driving Somewhere?</div>
+                </div>
+                <div className="safety-container beach-safety" onClick={() => handleNavigate('/beach-safety')}>
+                    <div className="safety-text">Heading out to the beach?</div>
                 </div>
             </div>
             <div className="content-wrap">
@@ -49,14 +57,7 @@ function Homepage() {
 
             </div>
 
-            <div className="safety-sections">
-                <div className="safety-container road-safety" onClick={() => handleNavigate('/road-safety')}>
-                    <div className="safety-text">Driving Somewhere?</div>
-                </div>
-                <div className="safety-container beach-safety" onClick={() => handleNavigate('/beach-safety')}>
-                    <div className="safety-text">Heading out to the beach?</div>
-                </div>
-            </div>
+            
             <Footer />
         </div>
     );

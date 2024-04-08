@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
   }
   
   .cards-container-ep {
@@ -14,7 +15,7 @@
   
   .card-ep {
     cursor: pointer;
-    width: 200px;
+    width: 280px;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
