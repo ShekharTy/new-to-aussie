@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/new-to-aussie/static/css/main.622adc4f.css",
-    "main.js": "/new-to-aussie/static/js/main.dcfba5fa.js",
+    "main.js": "/new-to-aussie/static/js/main.f56abd0e.js",
     "static/js/453.f6fb25a1.chunk.js": "/new-to-aussie/static/js/453.f6fb25a1.chunk.js",
     "static/media/swim_banner.jpg": "/new-to-aussie/static/media/swim_banner.d6a7ce60ac206aeb95ae.jpg",
     "static/media/bg2.jpg": "/new-to-aussie/static/media/bg2.aa428b8940f96ced8602.jpg",
@@ -47,11 +47,11 @@
     "static/media/slick.woff": "/new-to-aussie/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/new-to-aussie/index.html",
     "main.622adc4f.css.map": "/new-to-aussie/static/css/main.622adc4f.css.map",
-    "main.dcfba5fa.js.map": "/new-to-aussie/static/js/main.dcfba5fa.js.map",
+    "main.f56abd0e.js.map": "/new-to-aussie/static/js/main.f56abd0e.js.map",
     "453.f6fb25a1.chunk.js.map": "/new-to-aussie/static/js/453.f6fb25a1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.622adc4f.css",
-    "static/js/main.dcfba5fa.js"
+    "static/js/main.f56abd0e.js"
   ]
 }
