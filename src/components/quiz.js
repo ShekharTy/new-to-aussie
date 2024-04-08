@@ -115,6 +115,8 @@ function Quiz() {
     const progressWidth = ((currentQuestion + 1) / questions.length) * 100 + '%';
     
     return (
+        <div>
+            <h1>Quiz</h1>
         <div className='quiz-rs'>
             {showScore ? (
                 <div className='score-section-rs'>
@@ -152,6 +154,7 @@ function Quiz() {
                     </div>
                 </>
             )}
+        </div>
         </div>
     );
 }
