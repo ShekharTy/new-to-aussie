@@ -116,3 +116,17 @@ body,
 .safety-guide h3 {
     margin-top: 0;
 }
+
+.start-exploring-btn, .learn-more-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0085FF;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.start-exploring-btn:hover, .learn-more-btn:hover {
+    background-color: darkgreen;
+}

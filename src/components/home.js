@@ -19,18 +19,21 @@ function Homepage() {
         <div className="page-container-home">
             <Header />
             <div className="image-message-container-home">
-                <img className='bg-img' src={bgimg} alt="Background"></img>
+                <img className='bg-img' src={bgimg} alt="Background" />
                 <div className="welcome-message-home">
-                    <h1>Prepare with New To Aussie</h1>
-                    <h4>Stay Safe on Your Australian Journey</h4>
+                    <h1>Welcome to New To Aussie</h1>
+                    <h4>Your Essential Guide to Navigating Victoria Safely</h4>
+                    <button className="start-exploring-btn" onClick={() => handleNavigate('/overview')}>Start Exploring</button> {/* Primary CTA */}
                 </div>
             </div>
             <div className="safety-sections">
                 <div className="safety-container road-safety" onClick={() => handleNavigate('/road-safety')}>
                     <div className="safety-text">Driving Somewhere?</div>
+                    <button className="learn-more-btn">Learn More</button> 
                 </div>
                 <div className="safety-container beach-safety" onClick={() => handleNavigate('/beach-safety')}>
                     <div className="safety-text">Heading out to the beach?</div>
+                    <button className="learn-more-btn">Learn More</button>
                 </div>
             </div>
             <div className="content-wrap">
@@ -57,7 +60,7 @@ function Homepage() {
 
             </div>
 
-            
+
             <Footer />
         </div>
     );
