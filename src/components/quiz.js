@@ -108,6 +108,7 @@ function Quiz() {
         setScore(0);
         setCurrentQuestion(0);
         setShowScore(false);
+        setUserAnswers([]);
     };
 
     // Calculate progress bar width
