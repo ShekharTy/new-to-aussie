@@ -2,10 +2,7 @@ import React, { useState, useRef } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'; // Import arrow icons
 import '../styles/swim-safety.css';
-import bannerImage from '../data/swim_banner.jpg'; 
-
 
 // Array of image data
 const imageData = [
@@ -93,12 +90,7 @@ const imageData = [
         title: 'No Sking',
         facts: 'No Water skiing is prohibited in the area.'
     },
-    {
-        imageSrc: require('../data/no_fishing.png'),
-        altText: 'No Fishing',
-        title: 'No Fishing',
-        facts: 'No Fishing is allowed in the area...'
-    },
+
 ];
 
 function SwimSafety() {
@@ -112,41 +104,23 @@ function SwimSafety() {
         setFlagCounter(currentSlide + 1); // Slide index starts from 0, so add 1
     };
 
-    // Function to handle clicking on the left arrow
-    const handleLeftArrowClick = () => {
+    // Function to handle clicking on the previous button
+    const prevSlide = () => {
         sliderRef.current.slickPrev(); // Go to the previous slide
     };
 
-    // Function to handle clicking on the right arrow
-    const handleRightArrowClick = () => {
+    // Function to handle clicking on the next button
+    const nextSlide = () => {
         sliderRef.current.slickNext(); // Go to the next slide
     };
 
     return (
-       
         <div id="swim">
-            <h2>Learn Beach Safety & Regulatory Signs</h2>
-            <p>
-            Welcome to the section dedicated to beach safety learning! We believe that enjoying the beach should be both fun and safe. Whether you're a seasoned beachgoer or someone new to the coastal environment, there's always something new to learn about staying safe by the water.
-            </p>  
-
-            <div className="banner">
-                <img src={bannerImage} alt="Banner" className="banner-image" />
-                </div>
-                 
-            <h3>Why is beach safety important?</h3>
-            <p>Beaches can be dynamic and unpredictable environments, with changing tides, currents, and weather conditions. 
-            Knowing how to recognize potential hazards 
-            and understanding beach safety signage can significantly reduce the risk of accidents and ensure a positive beach experience for everyone.
-            </p>
-
-            <h3>Let's start learning below signs!</h3>
-            <p>Together, let's make every beach day a safe and memorable experience!
-            Start exploring below  safety & regulatory signs and empower yourself with the knowledge you need to stay safe and have fun at the beach!</p>
-           
+            <h2>Welcome to the section dedicated to beach safety learning!</h2> 
+            <p className="InstructionsSwimFlags">Click on the below previous and next buttons to learn about each flag's meanings.</p>
+            <div className="flag-box">
             <Slider
                 ref={sliderRef}
-                dots={true}
                 infinite={true}
                 speed={500}
                 slidesToShow={1}
@@ -164,17 +138,16 @@ function SwimSafety() {
                 ))}
             </Slider>
 
-            {/* Custom arrow components with click event handlers */}
-            <div className="custom-arrows">
-                <FaArrowLeft className="custom-arrow arrow-left" onClick={handleLeftArrowClick} />
-                <FaArrowRight className="custom-arrow arrow-right" onClick={handleRightArrowClick} />
-            </div>
-            
             {/* Flag Counter */}
             <div className="flag-counter"> Flag {flagCounter} / {imageData.length}</div>
 
+            {/* Navigation buttons */}
+            <div className="navigation-buttons">
+                <button onClick={prevSlide} style={{ backgroundColor: 'blue' }}>Previous Flag</button>
+                <button onClick={nextSlide} style={{ backgroundColor: 'blue' }}>Next Flag</button>
+            </div>
         </div>
-         
+    </div>
     );
 }
 

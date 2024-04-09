@@ -1,41 +1,19 @@
-/* CSS for changing the color of the page background */
-body {
-  background-color: #f0f0f0; /* Change the color code to the desired background color */
-}
 
-/* Style titles with a specific color */
 h1, h2, h3, h4, h5, h6 {
-  color: #006eff; /* Replace #ff0000 with the color code you want */
+  color: #006eff; 
 }
 
-
-/* Add margin above and below paragraphs */
 p {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-
-/* Ensure the entire content is centered within the page */
 #swim {
   max-width: 1200px; /* Set maximum width for content */
   margin: 0 auto; /* Center content horizontally */
   padding: 20px; /* Add padding around content */
 }
 
-/* Banner styles */
-.banner {
-  text-align: center;
-  margin-bottom: 20px; /* Add margin to separate the banner from the rest of the content */
-}
-
-.banner-image {
-  max-width: 100%; /* Ensure the banner image fits within its container */
-  max-height: 500px; /* Set maximum height for the banner image */
-}
-
-
-/* Add margin between the banner text and the rest of the content */
 h2 {
   margin-top: 20px;
 }
@@ -44,7 +22,6 @@ p {
   margin-bottom: 20px;
 }
 
-/* Adjust styles for gallery items */
 .gallery {
   padding: 0;
   margin: 0;
@@ -76,26 +53,58 @@ p {
 
 .gallery-item__facts {
   font-size: 18px;
-  color: #666;
+  color: blue;
 }
-
-/* Adjust styles for custom arrows */
-.custom-arrows {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px; /* Adjust as needed */
-}
-
-.custom-arrow {
+.navigation-buttons {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 px;
   cursor: pointer;
-  font-size: 24px; /* Adjust as needed */
-  margin: 0 10px; /* Adjust as needed */
+  border-radius: 5px;
 }
+
+.InstructionsSwimFlags {
+  font-style: italic;
+  color: white;
+  size: 80px;
+  background-color: blue;
+  border: 2px solid lavenderblush;
+  padding: 15px;
+
+animation-name: bounce;
+animation-duration: 1s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.navigation-buttons {
+  font-style: italic;
+}
+
 
 /* Adjust styles for flag counter */
 .flag-counter {
-  margin-top: 20px; /* Add some space above */
-  margin-bottom: 20px; /* Add some space below */
+  font-style: bold;
+  size: 60px;
+  margin-top: 100px; 
+  margin-bottom: 20px; 
   display: flex;
-  justify-content: center; /* Horizontally center */
+  justify-content: center;
+  color: black;
 }
+
+.flag-box {
+  border: 2px darkgray;
+  padding: 20px;
+  margin: 20px;
+  background-color: lightcyan;
+}
+
+
+
