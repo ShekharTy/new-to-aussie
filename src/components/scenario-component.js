@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import '../styles/scenario-component.css';
-import drownImage from '../data/drowning.png';
 import stormImage from '../data/strongwinds.png';
 import ripImage from '../data/ripcurrent.png';
 import sharkImage from '../data/sharkimage.png';
+import scenario1 from '../data/scenario1.mp4'; //
 
 // Beach Safety V2
 function ScenarioComponent() {
   const scenarios = [
     {
       description: 'You are at the beach and notice a swimmer in distress. What do you do?',
-      image: drownImage, // Image for scenario 1
+      videoUrl: scenario1,
       choices: [
         { id: 1, text: 'Call for help and notify a lifeguard.', feedback: 'Great choice! Lifeguards are trained to handle emergencies.' },
         { id: 2, text: 'Attempt to rescue the swimmer yourself.', feedback: 'Attempting to rescue without proper training can be dangerous. It’s best to call for help.' }
@@ -18,9 +18,9 @@ function ScenarioComponent() {
     },
     {
       description: 'You see Strong Winds Warning Sign. What do you do?',
-      image: stormImage, // Image for scenario 2
+      image: stormImage,
       choices: [
-        { id: 1, text: 'Understand the symbol and stay away from beach.', feedback: 'Excellent decision! Warnings should be adhered strictly to have a safe and enjoable experience.' },
+        { id: 1, text: 'Understand the symbol and stay away from beach.', feedback: 'Excellent decision! Warnings should be adhered strictly to have a safe and enjoyable experience.' },
         { id: 2, text: 'Ignore the signs and do parasailing', feedback: 'Do not ignore the warnings, It should be followed.' }
       ]
     },
@@ -36,7 +36,7 @@ function ScenarioComponent() {
       description: 'You spot a shark in the water nearby. What precautions should you take, and how you respond to the presence of sharks?',
       image: sharkImage,
       choices: [
-        { id: 1, text: 'Exit the water as quickly as possible & inform others.', feedback: 'Wise decision! Leaving the water promptly reduces the risk of encountering the shark. Alerting others helps ensure everyones safety..' },
+        { id: 1, text: 'Exit the water as quickly as possible & inform others.', feedback: 'Wise decision! Leaving the water promptly reduces the risk of encountering the shark. Alerting others helps ensure everyone’s safety..' },
         { id: 2, text: ' Stay calm and monitor.', feedback: 'Risky decision! While staying calm is important, remaining in the water near a shark can pose a significant danger. It is best to exit the water and seek safety onshore.' }
       ]
     }
@@ -56,7 +56,14 @@ function ScenarioComponent() {
         <div key={index}>
           <h2>Scenario {index + 1}</h2>
           <p>{scenario.description}</p>
-          <img src={scenario.image} alt={`Scenario ${index + 1}`} />
+          {index === 0 ? (
+            <video controls width="640" height="360">
+              <source src={scenario.videoUrl} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : (
+            <img src={scenario.image} alt={`Scenario ${index + 1}`} />
+          )}
           <div className="choices">
             {scenario.choices.map(choice => (
               <button key={choice.id} onClick={() => handleChoiceSelection(index, choice.id)}>
@@ -64,6 +71,7 @@ function ScenarioComponent() {
               </button>
             ))}
           </div>
+
           {selectedScenario && selectedScenario.scenarioIndex === index && (
             <div className="feedback">
               <p>{selectedScenario.selectedChoice.feedback}</p>

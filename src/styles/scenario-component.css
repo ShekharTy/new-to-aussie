@@ -1,9 +1,8 @@
+
 .scenario-container {
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 100px; 
   font-family: 'Cabin', sans-serif; /* Apply Cabin font to all text */
+  
 }
 
 .scenario-container + .scenario-container {
@@ -37,5 +36,14 @@
 }
 
 h2 {
-  color: #1E90FF; 
+  color: white; 
+}
+.video-container {
+  max-width: 60%;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 60%;
+  height: auto;
 }
